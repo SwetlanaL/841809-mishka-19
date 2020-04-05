@@ -8,7 +8,7 @@
 </head>
 <body>
   <header class="page-header">
-    <a class="page-header__logo" href="index.html">
+    <a class="page-header__logo">
       <img class="page-header__logo-image" src="img/logo.png" alt="Логотип интернет-магазина Мишка" width="86" height="35">
     </a>
     <nav class="main-nav">
@@ -25,17 +25,16 @@
       </div>
     </nav>
   </header>
-  <main class="catalog-page">
-    <div class="catalog-page-wrapper">
-      <h1 class="catalog-page__title page-title">Каталог товаров</h1>
+  <main class="page-catalog">
+    <div class="page-catalog-wrapper">
+      <h1 class="page-catalog__title page-title">Каталог товаров</h1>
       <section class="catalog">
-        <h2 class="visually-hidden">Фотография, название и описание каждого товара</h2>
         <ul class="catalog__list">
           <li class="catalog__item">
-            <div class="catalog__image-container">
+            <div class="catalog__image-container image-container">
               <img class="catalog__image product-image" src="img/bunny-toy.jpg" alt="Вязанный голубой зайчик с белой головой, стоит на задних лапах" width="260" height="195">
             </div>
-            <a class="catalog__item-link product-link" href="#">
+            <a class="catalog__item-link" href="#">
               <h3 class="catalog__item-title">Зайчик-попрыгайчик</h3>
               <span class="catalog__item-description">Рост 30 см, вес 200 г</span>
               <hr>
@@ -44,10 +43,10 @@
             <a class="catalog__cart-button" href="cart.html">Положить в корзину</a>
           </li>
           <li class="catalog__item">
-            <div class="catalog__image-container">
+            <div class="catalog__image-container image-container">
               <img class="catalog__image product-image" src="img/bunny-toy.jpg" alt="Круглая вязанная коричнево-белая корзинка с тремя свернутыми полотенцами внутри" width="260" height="195">
             </div>
-            <a class="catalog__item-link product-link" href="#">
+            <a class="catalog__item-link" href="#">
               <h3 class="catalog__item-title">Корзинка для белья</h3>
               <span class="catalog__item-description">Диаметр 15 см, высота 10 см</span>
               <hr>
@@ -56,7 +55,7 @@
             <a class="catalog__cart-button" href="cart.html">Положить в корзину</a>
           </li>
           <li class="catalog__item">
-            <div class="catalog__image-container">
+            <div class="catalog__image-container image-container">
               <img class="catalog__image product-image" src="img/bunny-toy.jpg" alt="Круглая вязанная зелёно-белая корзина с детскими мягкими игрушками внутри" width="260" height="195">
             </div>
             <a class="catalog__item-link product-link" href="#">
@@ -68,22 +67,6 @@
             <a class="catalog__cart-button" href="cart.html">Положить в корзину</a>
           </li>
         </ul>
-      </section>
-      <section class="catalog-video">
-        <h3 class="catalog-video__title">Процесс производства</h3>
-        <div class="catalog-video__video-container">
-          <video class="catalog-video__content product-image" width="260" height="150" muted poster="img/video-poster.jpg">
-            <source type="video/mp4" media="" srcset="">
-            Ваш браузер не поддерживает видеотэг
-          </video>
-          <a href="#" class="catalog-video__play-button">
-            <svg class="catalog-video__play-button-image" width="101" height="77"></svg>
-          </a>
-        </div>
-        <a class="catalog-video__link product-link" href="#">
-          <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        </a>
-        <a class="catalog-video__order-button button" href="cart.html">Сделать заказ</a>
       </section>
     </div>
   </main>
@@ -97,32 +80,8 @@
       <hr>
     </div>
     <div class="page-footer__copyright">
-      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright">Разработано</a>
     </div>
   </footer>
-  <div class="modal visually-hidden">
-    <div class="modal-size-selection">
-      <h2 class="modal-size-selection__title">Добавить в корзину</h2>
-      <span class="modal-size-selection__request">Выберите размер:</span>
-      <form class="modal-size-selection-form" action="https://echo.htmlacademy.ru" method="post">
-        <p class="modal-size-selection-form__checkbox">
-          <label class="modal-size-selectiom-form__label">s`
-            <input class="modal-size-selection-form__control visually-hidden" name="small" type="checkbox" checked>
-          </label>
-        </p>
-        <p class="modal-size-selection-form__checkbox">
-          <label class="modal-size-selectiom-form__label">m`
-            <input class="modal-size-selection-form__control visually-hidden" name="medium" type="checkbox">
-          </label>
-        </p>
-        <p class="modal-size-selection-form__checkbox">
-          <label class="modal-size-selectiom-form__label">l
-            <input class="modal-size-selection-form__control visually-hidden" name="large" type="checkbox">
-          </label>
-        </p>
-      </form>
-      <button class="modal-size-selection__button" type="submit">Добавить</button>
-    </div>
-  </div>
 </body>
 </html>
