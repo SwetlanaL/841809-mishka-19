@@ -5,22 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>HTML Academy: Мишка</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="page-header">
     <a class="page-header__logo" href="index.html">
-      <img class="page-header__logo-image" src="img/logo.png" alt="Логотип интернет-магазина Мишка" width="86" height="35">
+      <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Логотип интернет-магазина Мишка" width="86" height="35">
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
-          <li class="sile-list__item site-list__item--active"><a>Каталог товаров</a></li>
-          <li class="sile-list__item"><a href="form.html">Вязание на заказ</a></li>
+          <li class="site-list__item site-list__item--active"><a class="site-list__link">Каталог товаров</a></li>
+          <li class="site-list__item"><a class="site-list__link" href="form.html">Вязание на заказ</a></li>
         </ul>
         <ul class="main-nav__list user-list">
-          <li class="user-list__item"><a href="#">Поиск по сайту</a></li>
-          <li class="user-list__item"><a>Корзина: <span class="site-list__cart-status">пока пуста</span></a></li>
+          <li class="user-list__item"><a class="user-list__link" href="#">Поиск по сайту</a></li>
+          <li class="user-list__item"><a class="user-list__link">Корзина: <span class="site-list__cart-status">пока пуста</span></a></li>
         </ul>
       </div>
     </nav>
@@ -33,36 +34,36 @@
         <ul class="catalog__list">
           <li class="catalog__item">
             <div class="catalog__image-container">
-              <img class="catalog__image product-image" src="img/bunny-toy.jpg" alt="Вязанный голубой зайчик с белой головой, стоит на задних лапах" width="260" height="195">
+              <img class="catalog__image" src="img/photo-hare-mobile@1x.jpg" alt="Вязанный голубой зайчик с белой головой, стоит на задних лапах" width="260" height="195">
             </div>
             <a class="catalog__item-link product-link" href="#">
               <h3 class="catalog__item-title">Зайчик-попрыгайчик</h3>
               <span class="catalog__item-description">Рост 30 см, вес 200 г</span>
-              <hr>
+              <hr class="catalog__item-divider">
               <span class="catalog__item-price">1 200 руб.</span>
             </a>
             <a class="catalog__cart-button" href="cart.html">Положить в корзину</a>
           </li>
           <li class="catalog__item">
             <div class="catalog__image-container">
-              <img class="catalog__image product-image" src="img/bunny-toy.jpg" alt="Круглая вязанная коричнево-белая корзинка с тремя свернутыми полотенцами внутри" width="260" height="195">
+              <img class="catalog__image" src="img/photo-bowl-mobile@1x.jpg" alt="Круглая вязанная коричнево-белая корзинка с тремя свернутыми полотенцами внутри" width="260" height="195">
             </div>
             <a class="catalog__item-link product-link" href="#">
               <h3 class="catalog__item-title">Корзинка для белья</h3>
               <span class="catalog__item-description">Диаметр 15 см, высота 10 см</span>
-              <hr>
+              <hr class="catalog__item-divider">
               <span class="catalog__item-price">690 руб.</span>
             </a>
             <a class="catalog__cart-button" href="cart.html">Положить в корзину</a>
           </li>
           <li class="catalog__item">
             <div class="catalog__image-container">
-              <img class="catalog__image product-image" src="img/bunny-toy.jpg" alt="Круглая вязанная зелёно-белая корзина с детскими мягкими игрушками внутри" width="260" height="195">
+              <img class="catalog__image" src="img/photo-toys-mobile@1x.jpg" alt="Круглая вязанная зелёно-белая корзина с детскими мягкими игрушками внутри" width="260" height="195">
             </div>
             <a class="catalog__item-link product-link" href="#">
               <h3 class="catalog__item-title">Большая корзинка для игрушек</h3>
               <span class="catalog__item-description">Диаметр 30 см, высота 30 см</span>
-              <hr>
+              <hr class="catalog__item-divider">
               <span class="catalog__item-price">1 500 руб.</span>
             </a>
             <a class="catalog__cart-button" href="cart.html">Положить в корзину</a>
@@ -72,7 +73,7 @@
       <section class="catalog-video">
         <h3 class="catalog-video__title">Процесс производства</h3>
         <div class="catalog-video__video-container">
-          <video class="catalog-video__content product-image" width="260" height="150" muted poster="img/video-poster.jpg">
+          <video class="catalog-video__content" width="260" height="150" muted poster="img/video-mobile@1x.jpg">
             <source type="video/mp4" media="" srcset="">
             Ваш браузер не поддерживает видеотэг
           </video>
@@ -90,9 +91,9 @@
   <footer class="page-footer">
     <div class="page-footer__social">
       <ul class="page-footer__social-list">
-        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--instagram" href="#"></a>Мы в Инстаграм</li>
-        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--facebook" href="#"></a>Мы в Фейсбук</li>
-        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--twitter" href="#"></a>Мы в Твиттер</li>
+        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--instagram" href="#">Мы в Инстаграм</a></li>
+        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--facebook" href="#">Мы в Фейсбук</a></li>
+        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--twitter" href="#">Мы в Твиттер</a></li>
       </ul>
       <hr>
     </div>
@@ -100,18 +101,18 @@
       <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
     </div>
   </footer>
-  <div class="modal visually-hidden">
+  <div class="modal">
     <div class="modal-size-selection">
       <h2 class="modal-size-selection__title">Добавить в корзину</h2>
       <span class="modal-size-selection__request">Выберите размер:</span>
       <form class="modal-size-selection-form" action="https://echo.htmlacademy.ru" method="post">
         <p class="modal-size-selection-form__checkbox">
-          <label class="modal-size-selectiom-form__label">s`
+          <label class="modal-size-selectiom-form__label">s
             <input class="modal-size-selection-form__control visually-hidden" name="small" type="checkbox" checked>
           </label>
         </p>
         <p class="modal-size-selection-form__checkbox">
-          <label class="modal-size-selectiom-form__label">m`
+          <label class="modal-size-selectiom-form__label">m
             <input class="modal-size-selection-form__control visually-hidden" name="medium" type="checkbox">
           </label>
         </p>
@@ -121,7 +122,7 @@
           </label>
         </p>
       </form>
-      <button class="modal-size-selection__button" type="submit">Добавить</button>
+      <button class="modal-size-selection__button button button--green" type="submit">Добавить</button>
     </div>
   </div>
 </body>

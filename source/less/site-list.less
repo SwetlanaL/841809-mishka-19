@@ -1,0 +1,23 @@
+.site-list {
+  .list-reset;
+}
+
+.site-list__item {
+  .set-paddings(1.7em; 0; 1.9em; 5em);
+  .outer-shadow;
+  .inner-shadow;
+}
+
+.site-list__link {
+  .set-font(17px; 24px);
+  font-weight: 700;
+  color: @black;
+
+  &:hover {
+    color: fadeout(@black; 40%);
+  }
+
+  &:active {
+    color: fadeout(@black; 70%);
+  }
+}
