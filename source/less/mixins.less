@@ -1,0 +1,47 @@
+.box-sizing (@type: border-box) {
+  box-sizing: @type;
+}
+
+.wrapper-basic-mobile(@width: 81%) {
+  width: @width;
+  margin: 0 auto;
+}
+
+.list-reset(@padding-left: 0) {
+  margin: 0;
+  padding-left: @padding-left;
+  list-style-type: none;
+}
+
+.set-margins(@margin-top; @margin-right; @margin-bottom; @margin-left) {
+  margin: @margin-top @margin-right @margin-bottom @margin-left;
+}
+
+.set-paddings(@padding-top; @padding-right; @padding-bottom; @padding-left) {
+  padding: @padding-top @padding-right @padding-bottom @padding-left;
+}
+
+.set-font(@font-size; @line-height) {
+  font-size: @font-size;
+  line-height: @line-height;
+}
+
+.outer-shadow(@x: 0, @y: 1px, @blur: 0, @spread: 0, @color: @white-two) {
+  box-shadow+: @x @y @blur @spread @color;
+}
+
+.inner-shadow(@x: 0, @y: 1px, @blur: 0, @spread: 0, @color: @white-two) {
+  box-shadow+: inset @x @y @blur @spread @color;
+}
+
+.box-shadow(@string) {
+  box-shadow: @string;
+}
+
+.text-indent(@value: -10000px) {
+  text-indent: @value;
+}
+
+.transition(@property: all, @duration: 0.6s, @function: ease-in) {
+  transition: @arguments;
+}
