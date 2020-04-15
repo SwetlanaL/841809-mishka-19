@@ -1,0 +1,37 @@
+.button {
+  display: block;
+  .wrapper-basic-mobile(100%);
+  .set-paddings(0.82em; 0.59em; 0.82em; 0.59em);
+  .set-font(17px; 20px);
+  font-weight: 700;
+  color: @text;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: @background-basic;
+  border: 2px solid @text;
+  cursor: pointer;
+  .transition;
+
+  &:hover {
+    color: @background-basic;
+    background-color: @text;
+  }
+
+  &:active {
+    color: fadeout(@background-basic; 70%);
+    background-color: @text;
+    outline: none;
+  }
+
+  &--green {
+    color: @background-basic;
+    background-color: @accent-primary;
+    border: none;
+
+    &:active,
+    &:hover {
+      background-color: @accent-primary-hover;
+      outline: none;
+    }
+  }
+}

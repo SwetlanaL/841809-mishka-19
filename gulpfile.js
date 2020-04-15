@@ -8,7 +8,7 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
 
-gulp.task("css", function () {
+gulp.task("css", function() {
   return gulp.src("source/less/style.less")
     .pipe(plumber())
     .pipe(sourcemap.init())
@@ -21,7 +21,7 @@ gulp.task("css", function () {
     .pipe(server.stream());
 });
 
-gulp.task("server", function () {
+gulp.task("server", function() {
   server.init({
     server: "source/",
     notify: false,

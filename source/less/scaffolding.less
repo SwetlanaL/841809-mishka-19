@@ -1,0 +1,39 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: "OpenSans", "Arial", sans-serif;
+  .set-font(15px; 24px);
+  font-weight: 400;
+  color: @text;
+  text-align: left;
+  background-color: @background-basic;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
