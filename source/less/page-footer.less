@@ -1,0 +1,45 @@
+.page-footer {
+  .set-paddings(30px; 30px; 30px; 30px);
+  background-color: @grey;
+}
+
+.page-footer__social {
+  .wrapper-basic-mobile(100%);
+}
+
+.page-footer__social-list {
+  .list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.page-footer__social-link {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  .text-indent;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  // Иконки здесь временно, потом, видимо, поставлю в html:
+
+  &--instagram {
+    background-image: url("../img/icon-insta.svg");
+  }
+
+  &--facebook {
+    background-image: url("../img/icon-fb.svg");
+  }
+
+  &--twitter {
+    background-image: url("../img/icon-twitter.svg");
+  }
+}
+
+.page-footer__copyright {
+  .set-font(19px; 18px);
+  font-weight: 700;
+  color: @black;
+}
