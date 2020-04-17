@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <title>HTML Academy: Мишка</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <header class="page-header">
     <a class="page-header__logo" href="index.html">
@@ -33,102 +35,107 @@
       <h2 class="visually-hidden">Сделать заказ</h2>
       <form class="order__form" action="https://echo.htmlacademy.ru" method="get">
         <fieldset class="order__group">
-          <legend class="order__title">тип:</legend>
+          <legend class="order__title">тип</legend>
           <ul class="order__list type-list">
             <li class="type-list__item">
-              <label class="type-list__label">Аксессуар для интерьера
+              <label class="type-list__label order__label">Аксессуар для интерьера
                 <input class="type-list__control visually-hidden" type="radio" name="product-type" value="interior" checked>
               </label>
             </li>
             <li class="type-list__item">
-              <label class="type-list__label">Детская игрушка
+              <label class="type-list__label order__label">Детская игрушка
                 <input class="type-list__control visually-hidden" type="radio" name="product-type" value="toys">
               </label>
             </li>
           </ul>
         </fieldset>
-        <fieldset class="order__group">
-          <legend class="order__title">цвет:</legend>
+        <fieldset class="order__group order__group--color">
+          <legend class="order__title">цвет</legend>
           <ul class="order__list color-list">
             <li class="color-list__item">
-              <label class="color-list__label">Белый
+              <label class="color-list__label order__label">Белый
                 <input class="color-list__control visually-hidden" type="checkbox" name="white" checked>
               </label>
             </li>
             <li class="color-list__item">
-              <label class="color-list__label">Серый
+              <label class="color-list__label order__label">Серый
                 <input class="color-list__control visually-hidden" type="checkbox" name="grey" checked>
               </label>
             </li>
             <li class="color-list__item">
-              <label class="color-list__label">«Тиффани»
+              <label class="color-list__label order__label">«Тиффани»
                 <input class="color-list__control visually-hidden" type="checkbox" name="tiffani">
               </label>
             </li>
             <li class="color-list__item">
-              <label class="color-list__label">Черный
+              <label class="color-list__label order__label">Черный
                 <input class="color-list__control visually-hidden" type="checkbox" name="black">
               </label>
             </li>
             <li class="color-list__item">
-              <label class="color-list__label">Розовый
+              <label class="color-list__label order__label">Розовый
                 <input class="color-list__control visually-hidden" type="checkbox" name="pink">
               </label>
             </li>
             <li class="color-list__item">
-              <label class="color-list__label">Оранжевый
+              <label class="color-list__label order__label">Оранжевый
                 <input class="color-list__control visually-hidden" type="checkbox" name="orange">
               </label>
             </li>
           </ul>
         </fieldset>
-        <fieldset class="order__group">
-          <legend class="visually-hidden">Личные данные и детали заказа</legend>
-          <span class="order__email-title order__title">ФИО</span>
+        <fieldset class="order__group order__group--name">
+          <legend class="order__title order__title--name">ФИО</legend>
           <ul class="order__list email-list">
             <li class="email-list__item">
               <p class="email-list__group">
-                <label class="email-list__label">Имя:
-                  <input class="email-list__control" type="text" name="user-name" value="" placeholder="Введите ваше имя" required>
+                <label class="email-list__label order__label">Имя:
+                  <input class="email-list__control order__control" type="text" name="user-name" value="" placeholder="Введите ваше имя*" required>
                 </label>
               </p>
             </li>
             <li class="email-list__item">
               <p class="email-list__group">
-                <label class="email-list__label">Фамилия:
-                  <input class="email-list__control" type="text" name="user-second-name" value="" placeholder="Укажите фамилию" required>
+                <label class="email-list__label order__label">Фамилия:
+                  <input class="email-list__control order__control" type="text" name="user-second-name" value="" placeholder="Укажите фамилию*" required>
                 </label>
               </p>
             </li>
             <li class="email-list__item">
               <p class="email-list__group">
-                <label class="email-list__label">Отчество:
-                  <input class="email-list__control" type="text" name="user-fathers-name" value="" placeholder="Отчество, если желаете">
-                </label>
-              </p>
-            </li>
-            <li class="email-list__item">
-              <p class="email-list__group">
-                <label class="email-list__green-label order-title">тел
-                  <input class="email-list__control email-list__control--icon-tel" type="tel" name="user-phone-number" pattern="\+7\s?\d{3}\s?\d{3}\s?\d{2}\s?\d{2}" value="" placeholder="+7 ХХХ ХХХ ХХ ХХ" required>
-                </label>
-              </p>
-            </li>
-            <li class="email-list__item">
-              <p class="email-list__group">
-                <label class="email-list__green-label order-title">e-mail
-                  <input class="email-list__control email-list__control--icon-email" type="email" name="user-email" value="" placeholder="Ваш Email" required>
-                </label>
-              </p>
-            </li>
-            <li class="email-list__item">
-              <p class="email-list__group">
-                <label class="email-list__green-label order-title">доп
-                  <textarea class="email-list__textarea" rows="11" cols="48" name="user-text" placeholder="Опишите все ваши пожелания к заказу" required></textarea>
+                <label class="email-list__label order__label">Отчество:
+                  <input class="email-list__control order__control" type="text" name="user-fathers-name" value="" placeholder="Отчество, если желаете">
                 </label>
               </p>
             </li>
           </ul>
+        </fieldset>
+        <fieldset class="order__group">
+          <legend class="visually-hidden">Телефон и адрес электронной почты</legend>
+          <ul class="order__list email-list">
+            <li class="email-list__item">
+              <p class="email-list__group email-list__group--tel">
+                <label><span class="order__title order__title--tel">тел</span>
+                  <input class="email-list__control email-list__control--tel order__control" type="tel" name="user-phone-number" pattern="\+7\s?\d{3}\s?\d{3}\s?\d{2}\s?\d{2}" value="" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+                </label>
+              </p>
+            </li>
+            <li class="email-list__item">
+              <p class="email-list__group  email-list__group--email">
+                <label><span class="order__title order__title--email">e-mail</span>
+                  <input class="email-list__control email-list__control--email order__control" type="email" name="user-email" value="" placeholder="Ваш Email*" required>
+                </label>
+              </p>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="order__group order__group--textarea">
+          <legend class="visually-hidden">Форма письма с деталями заказа</legend>
+          <p class="email-list__group email-list__group--textarea">
+            <label><span class="order__title order__title--textarea">доп</span>
+              <textarea class="email-list__textarea" rows="6" cols="48" name="user-text" placeholder="Опишите все ваши пожелания к заказу" required></textarea>
+            </label>
+          </p>
         </fieldset>
         <span class="order__notes"><sup>*</sup>Поля обязательны для заполнения</span>
         <button class="order__button button" type="submit">Отправить заказ</button>
@@ -136,17 +143,15 @@
     </section>
   </main>
   <footer class="page-footer">
-    <div class="page-footer__social">
-      <ul class="page-footer__social-list">
-        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--instagram" href="#">Мы в Инстаграм</a></li>
-        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--facebook" href="#">Мы в Фейсбук</a></li>
-        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--twitter" href="#">Мы в Твиттер</a></li>
-      </ul>
-      <hr>
-    </div>
+    <ul class="page-footer__social-list">
+      <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--instagram" href="#">Мы в Инстаграм</a></li>
+      <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--facebook" href="#">Мы в Фейсбук</a></li>
+      <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--twitter" href="#">Мы в Твиттер</a></li>
+    </ul>
     <div class="page-footer__copyright">
-      <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright">Разработано</a>
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright-link">Разработано</a>
     </div>
   </footer>
 </body>
+
 </html>

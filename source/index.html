@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <title>HTML Academy: Мишка</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <header class="page-header">
     <a class="page-header__logo">
@@ -60,7 +62,7 @@
           <div class="weekly-product__image-container">
             <img class="weekly-product__image" src="img/triple-set-mobile@1x.jpg" alt="Три вязанных корзинки Тиффани разного размера" width="260" height="195">
           </div>
-            <span class="weekly-product__price">Цена:<span class="weekly-product__price-value"> 990 руб.</span></span>
+          <span class="weekly-product__price">Цена:<span class="weekly-product__price-value"> 990 руб.</span></span>
           <a class="weekly-product__order-button button" href="cart.html">Заказать</a>
         </div>
       </div>
@@ -81,7 +83,7 @@
     <section class="reviews">
       <div class="reviews__wrapper">
         <h2 class="reviews__title section-title">Отзывы</h2>
-        <div class="reviews_list">
+        <div class="reviews__list">
           <blockquote class="reviews__item">
             <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более
               стильными, а также набирают больше лайков!
@@ -103,9 +105,9 @@
           <h3 class="contact__title">Контакты</h3>
           <dl class="contact__info">
             <dt class="contact__name">e-mail:</dt>
-            <dd class="contact__content">info@mimimishkashop.ru</dd>
+            <dd class="contact__content"><a class="contact__email" href="#">info@mimimishkashop.ru</a></dd>
             <dt class="contact__name">адрес:</dt>
-            <dd class="contact__content">г. Санкт-Петербург,ул. Большая Конюшенная, д. 19/8, офис 101</dd>
+            <dd class="contact__content">г. Санкт-Петербург,<br>ул. Большая Конюшенная,<br> д. 19/8, офис 101</dd>
           </dl>
         </section>
       </div>
@@ -123,17 +125,15 @@
     </footer>
   </main>
   <footer class="page-footer">
-    <div class="page-footer__social">
-      <ul class="page-footer__social-list">
-        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--instagram" href="#">Мы в Инстаграм</a></li>
-        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--facebook" href="#">Мы в Фейсбук</a></li>
-        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--twitter" href="#">Мы в Твиттер</a></li>
-      </ul>
-    </div>
-    <hr>
+    <ul class="page-footer__social-list">
+      <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--instagram" href="#">Мы в Инстаграм</a></li>
+      <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--facebook" href="#">Мы в Фейсбук</a></li>
+      <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--twitter" href="#">Мы в Твиттер</a></li>
+    </ul>
     <div class="page-footer__copyright">
-      <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright">Разработано</a>
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright-link">Разработано</a>
     </div>
   </footer>
 </body>
+
 </html>

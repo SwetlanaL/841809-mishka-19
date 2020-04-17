@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <title>HTML Academy: Мишка</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <header class="page-header">
     <a class="page-header__logo" href="index.html">
@@ -82,48 +84,44 @@
           </a>
         </div>
         <a class="catalog-video__link product-link" href="#">
-          <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <p class="catalog-video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
         </a>
         <a class="catalog-video__order-button button" href="cart.html">Сделать заказ</a>
       </section>
     </div>
   </main>
   <footer class="page-footer">
-    <div class="page-footer__social">
-      <ul class="page-footer__social-list">
-        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--instagram" href="#">Мы в Инстаграм</a></li>
-        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--facebook" href="#">Мы в Фейсбук</a></li>
-        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--twitter" href="#">Мы в Твиттер</a></li>
-      </ul>
-      <hr>
-    </div>
+    <ul class="page-footer__social-list">
+      <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--instagram" href="#">Мы в Инстаграм</a></li>
+      <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--facebook" href="#">Мы в Фейсбук</a></li>
+      <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--twitter" href="#">Мы в Твиттер</a></li>
+    </ul>
     <div class="page-footer__copyright">
-      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright-link">Разработано</a>
     </div>
   </footer>
-  <div class="modal">
-    <div class="modal-size-selection">
-      <h2 class="modal-size-selection__title">Добавить в корзину</h2>
-      <span class="modal-size-selection__request">Выберите размер:</span>
-      <form class="modal-size-selection-form" action="https://echo.htmlacademy.ru" method="post">
-        <p class="modal-size-selection-form__checkbox">
-          <label class="modal-size-selectiom-form__label">s
-            <input class="modal-size-selection-form__control visually-hidden" name="small" type="checkbox" checked>
-          </label>
-        </p>
-        <p class="modal-size-selection-form__checkbox">
-          <label class="modal-size-selectiom-form__label">m
-            <input class="modal-size-selection-form__control visually-hidden" name="medium" type="checkbox">
-          </label>
-        </p>
-        <p class="modal-size-selection-form__checkbox">
-          <label class="modal-size-selectiom-form__label">l
-            <input class="modal-size-selection-form__control visually-hidden" name="large" type="checkbox">
-          </label>
-        </p>
-      </form>
-      <button class="modal-size-selection__button button button--green" type="submit">Добавить</button>
-    </div>
+  <div class="modal-size-selection modal">
+    <h2 class="modal-size-selection__title section-title">Добавить в корзину</h2>
+    <span class="modal-size-selection__request">Выберите размер:</span>
+    <form class="modal-size-selection__form" action="https://echo.htmlacademy.ru" method="post">
+      <!-- <p class="modal-size-selection__checkbox"> -->
+      <label class="modal-size-selection__label">s
+        <input class="modal-size-selection__control visually-hidden" name="small" type="checkbox">
+      </label>
+      <!-- </p> -->
+      <!-- <p class="modal-size-selection__checkbox"> -->
+      <label class="modal-size-selection__label">m
+        <input class="modal-size-selection__control visually-hidden" name="medium" type="checkbox">
+      </label>
+      <!-- </p> -->
+      <!-- <p class="modal-size-selection__checkbox"> -->
+      <label class="modal-size-selection__label">l
+        <input class="modal-size-selection__control visually-hidden" name="large" type="checkbox">
+      </label>
+      <!-- </p> -->
+    </form>
+    <button class="modal-size-selection__button button button--green" type="submit">Добавить</button>
   </div>
 </body>
+
 </html>

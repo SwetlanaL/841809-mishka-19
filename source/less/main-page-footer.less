@@ -1,3 +1,27 @@
 .main-page-footer {
   margin-bottom: 38px;
 }
+
+.main-page-footer__wrapper {
+  .wrapper-basic-mobile;
+  margin-bottom: 38px;
+}
+
+.main-page-footer__map-wrapper {
+  position: relative;
+  .wrapper-basic-mobile(100%);
+  margin-bottom: 41px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 43.1%;
+    bottom: 46%;
+    width: 67px;
+    height: 100px;
+    background-image: url("../img/icon-map-pin.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 10;
+  }
+}
