@@ -1,0 +1,23 @@
+.user-list {
+  .list-reset;
+}
+
+.user-list__item {
+  .set-paddings(1.7em; 0; 1.9em; 5em);
+  .outer-shadow;
+  .inner-shadow;
+}
+
+.user-list__link {
+  .set-font(17px; 24px);
+  font-weight: 700;
+  color: @titles;
+
+  &:hover {
+    color: fadeout(@titles; 40%);
+  }
+
+  &:active {
+    color: fadeout(@titles; 70%);
+  }
+}
