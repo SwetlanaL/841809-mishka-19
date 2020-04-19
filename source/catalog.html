@@ -72,21 +72,21 @@
           </li>
         </ul>
       </section>
-      <section class="catalog-video">
-        <h3 class="catalog-video__title">Процесс производства</h3>
-        <div class="catalog-video__video-container">
-          <video class="catalog-video__content" width="260" height="150" muted poster="img/video-mobile@1x.jpg">
+      <section class="video">
+        <h3 class="video__title">Процесс производства</h3>
+        <div class="video__container">
+          <video class="video__content" width="260" height="150" muted poster="img/video-mobile@1x.jpg">
             <source type="video/mp4" media="" srcset="">
             Ваш браузер не поддерживает видеотэг
           </video>
-          <a href="#" class="catalog-video__play-button">
-            <svg class="catalog-video__play-button-image" width="101" height="77"></svg>
+          <a href="#" class="video__play-button">
+            <svg class="video__play-button-image" width="101" height="77"></svg>
           </a>
         </div>
-        <a class="catalog-video__link product-link" href="#">
-          <p class="catalog-video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+        <a class="video__link product-link" href="#">
+          <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
         </a>
-        <a class="catalog-video__order-button button" href="cart.html">Сделать заказ</a>
+        <a class="video__order-button button" href="cart.html">Сделать заказ</a>
       </section>
     </div>
   </main>
@@ -104,21 +104,20 @@
     <h2 class="modal-size-selection__title section-title">Добавить в корзину</h2>
     <span class="modal-size-selection__request">Выберите размер:</span>
     <form class="modal-size-selection__form" action="https://echo.htmlacademy.ru" method="post">
-      <!-- <p class="modal-size-selection__checkbox"> -->
-      <label class="modal-size-selection__label">s
-        <input class="modal-size-selection__control visually-hidden" name="small" type="checkbox">
-      </label>
-      <!-- </p> -->
-      <!-- <p class="modal-size-selection__checkbox"> -->
-      <label class="modal-size-selection__label">m
-        <input class="modal-size-selection__control visually-hidden" name="medium" type="checkbox">
-      </label>
-      <!-- </p> -->
-      <!-- <p class="modal-size-selection__checkbox"> -->
-      <label class="modal-size-selection__label">l
-        <input class="modal-size-selection__control visually-hidden" name="large" type="checkbox">
-      </label>
-      <!-- </p> -->
+      <ul class="modal-size-selection__list">
+        <li class="modal-size-selection__item">
+          <input id="size-s" class="modal-size-selection__control visually-hidden" type="radio" name="size" value="small" checked>
+          <label for="size-s" class="modal-size-selection__label">s</label>
+        </li>
+        <li class="modal-size-selection__item">
+          <input id="size-m" class="modal-size-selection__control visually-hidden" type="radio" name="size" value="medium">
+          <label for="size-m" class="modal-size-selection__label">m</label>
+        </li>
+        <li class="modal-size-selection__item">
+          <input id="size-l" class="modal-size-selection__control visually-hidden" type="radio" name="size" value="large">
+          <label for="size-l" class="modal-size-selection__label">l</label>
+        </li>
+      </ul>
     </form>
     <button class="modal-size-selection__button button button--green" type="submit">Добавить</button>
   </div>

@@ -1,35 +1,42 @@
 .order {
   .wrapper-basic-mobile;
-  margin-bottom: 55px;
+  margin-bottom: 54px;
 }
 
 .order__group {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin: 0 0 30px;
+  margin: 0;
   padding: 0;
   border: none;
+
+  &--type {
+    margin-bottom: 30px;
+  }
 
   &--color {
     margin-bottom: 3px;
   }
 
   &--name {
-    margin-bottom: 13px;
+    margin-bottom: 9px;
+  }
+
+  &--contact {
+    margin-bottom: 29px;
   }
 
   &--textarea {
-    margin-bottom: 6px;
+    margin-bottom: 12px;
   }
 }
 
 .order__title {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
-  margin-bottom: 31px;
   padding: 0;
   .set-font(17px; 16px);
   vertical-align: middle;
@@ -45,12 +52,17 @@
     background-color: @accent-primary;
   }
 
-  &--name {
-    margin-bottom: 26px;
+  &--color,
+  &--type {
+    margin-bottom: 31px;
   }
 
-  &--tel,
-  &--email {
+  &--name {
+    margin-bottom: 29px;
+  }
+
+  &--email,
+  &--tel {
     margin-bottom: 0;
   }
 
@@ -60,30 +72,89 @@
 }
 
 .order__list {
-  width: 92%;
+  width: 100%;
   .list-reset;
+  padding-left: 62px;
+}
+
+.order__item {
+  &--type {
+    margin-bottom: 12px;
+  }
+
+  &--color {
+    margin-bottom: 37px;
+  }
 }
 
 .order__label {
+  position: relative;
   .set-font(17px; 18px);
   font-weight: 700;
   color: @titles;
-}
+  cursor: pointer;
 
-.order__control {
-  width: 100%;
-  .set-paddings(13px; 0; 16px; 0);
-  .set-font(17px; 18px);
-  font-family: "OpenSans", "Arial", sans-serif;
-  font-weight: 400;
-  color: @text;
-  border-style: hidden;
-  outline: none;
-  border-bottom: 2px solid @titles;
+  &--color {
+    &::before {
+      content: "";
+      position: absolute;
+      left: -62px;
+      top: -7px;
+      width: 40px;
+      height: 40px;
+      border: 2px solid @text;
+    }
 
-  &::placeholder {
-    .set-paddings(20px; 0; 10px; 0);
-    color: fadeout(@text, 70%);
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: -62px;
+      top: -7px;
+      width: 40px;
+      height: 40px;
+      background: url("../img/tick-mobile.svg") no-repeat center;
+    }
+  }
+
+  &--type {
+    &::before {
+      content: "";
+      position: absolute;
+      left: -62px;
+      top: -7px;
+      width: 40px;
+      height: 40px;
+      border: 2px solid @text;
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: calc(-62px + 12px);
+      top: calc(-7px + 12px);
+      width: 16px;
+      height: 16px;
+      background-color: @form-borders;
+      border-radius: 50%;
+    }
+  }
+
+  &--color:hover::before,
+  &--type:hover::before {
+    border-color: @form-borders;
+  }
+
+  &--color:active::before,
+  &--type:active::before {
+    border-color: fadeout(@text; 70%);
+  }
+
+  .order__control:checked + &--color::after,
+  .order__control:checked + &--type::after {
+    display: block;
   }
 }
 

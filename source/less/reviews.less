@@ -66,33 +66,51 @@
 }
 
 .reviews__toggle {
+  position: relative;
   width: 50%;
   height: 52px;
   padding: 0;
   .text-indent;
-  border: 1px solid @border;
   background-color: inherit;
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
+  outline: none;
+  border: 1px solid @border;
   cursor: pointer;
 
   &--left {
-    border-right: none;
-    background-image: url("../img/icon-left-arrow.svg");
+    border-right-color: @background-basic;
+
+    &::after {
+      background-image: url("../img/icon-left-arrow.svg");
+    }
   }
 
   &--right {
-    background-image: url("../img/icon-right-arrow.svg");
+    &::after {
+      background-image: url("../img/icon-right-arrow.svg");
+    }
   }
 
-  &:hover {
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 50px;
+    height: 26px;
+    transform: translate(-50%, -50%);
+    background-repeat: no-repeat;
+    background-size: 50px 26px;
+  }
+
+  &:hover::after {
     opacity: 0.6;
   }
 
-  &:active,
-  &:focus {
+  &:active::after,
+  &:focus::after {
     opacity: 0.3;
-    outline: none;
   }
 }
 
