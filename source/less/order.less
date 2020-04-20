@@ -1,0 +1,166 @@
+.order {
+  .wrapper-basic-mobile;
+  margin-bottom: 54px;
+}
+
+.order__group {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  &--type {
+    margin-bottom: 30px;
+  }
+
+  &--color {
+    margin-bottom: 3px;
+  }
+
+  &--name {
+    margin-bottom: 9px;
+  }
+
+  &--contact {
+    margin-bottom: 29px;
+  }
+
+  &--textarea {
+    margin-bottom: 12px;
+  }
+}
+
+.order__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  .set-font(17px; 16px);
+  vertical-align: middle;
+  font-weight: bold;
+  color: @accent-primary;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    flex-grow: 1;
+    margin-left: 20px;
+    height: 1px;
+    background-color: @accent-primary;
+  }
+
+  &--color,
+  &--type {
+    margin-bottom: 31px;
+  }
+
+  &--name {
+    margin-bottom: 29px;
+  }
+
+  &--email,
+  &--tel {
+    margin-bottom: 0;
+  }
+
+  &--textarea {
+    margin-bottom: 24px;
+  }
+}
+
+.order__list {
+  width: 100%;
+  .list-reset;
+  padding-left: 62px;
+}
+
+.order__item {
+  &--type {
+    margin-bottom: 12px;
+  }
+
+  &--color {
+    margin-bottom: 37px;
+  }
+}
+
+.order__label {
+  position: relative;
+  .set-font(17px; 18px);
+  font-weight: 700;
+  color: @titles;
+  cursor: pointer;
+
+  &--color {
+    &::before {
+      content: "";
+      position: absolute;
+      left: -62px;
+      top: -7px;
+      width: 40px;
+      height: 40px;
+      border: 2px solid @text;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: -62px;
+      top: -7px;
+      width: 40px;
+      height: 40px;
+      background: url("../img/tick-mobile.svg") no-repeat center;
+    }
+  }
+
+  &--type {
+    &::before {
+      content: "";
+      position: absolute;
+      left: -62px;
+      top: -7px;
+      width: 40px;
+      height: 40px;
+      border: 2px solid @text;
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: calc(-62px + 12px);
+      top: calc(-7px + 12px);
+      width: 16px;
+      height: 16px;
+      background-color: @form-borders;
+      border-radius: 50%;
+    }
+  }
+
+  &--color:hover::before,
+  &--type:hover::before {
+    border-color: @form-borders;
+  }
+
+  &--color:active::before,
+  &--type:active::before {
+    border-color: fadeout(@text; 70%);
+  }
+
+  .order__control:checked + &--color::after,
+  .order__control:checked + &--type::after {
+    display: block;
+  }
+}
+
+.order__notes {
+  display: inline-block;
+  margin-bottom: 30px;
+  .set-font(14px; 16px);
+  vertical-align: middle;
+}

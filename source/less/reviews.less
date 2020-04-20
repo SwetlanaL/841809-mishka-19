@@ -1,8 +1,119 @@
 .reviews__wrapper {
   .wrapper-basic-mobile;
   margin-bottom: 55px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: -30px;
+    right: -30px;
+    bottom: -52px;
+    height: 7px;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-size: 320px 7px;
+    background-position-x: -8px;
+    background-repeat: repeat-x;
+  }
 }
 
 .reviews__title {
-  margin-bottom: 86px;
+  margin-bottom: 23px;
+}
+
+.reviews__item {
+  margin: 0;
+}
+
+.reviews__text {
+  .set-font(15px; 30px);
+  font-weight: 400;
+  margin-bottom: 28px;
+}
+
+.reviews__author-name {
+  display: inline-block;
+  margin-bottom: 4px;
+  .set-font(17px; 24px);
+  font-weight: 700;
+  font-style: normal;
+  color: @titles;
+  vertical-align: middle;
+}
+
+.reviews__author-link {
+  display: inline-block;
+  margin-bottom: 28px;
+  .set-font(17px; 30px);
+  font-weight: 400;
+  vertical-align: middle;
+  color: @text;
+
+  &:hover {
+    color: @accent-secondary-hover;
+  }
+
+  &:active {
+    color: fadeout(@accent-secondary-hover; 70%);
+  }
+}
+
+.reviews__toggles {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 37px;
+}
+
+.reviews__toggle {
+  position: relative;
+  width: 50%;
+  height: 52px;
+  padding: 0;
+  .text-indent;
+  background-color: inherit;
+  background-repeat: no-repeat;
+  background-position: center;
+  outline: none;
+  border: 1px solid @border;
+  cursor: pointer;
+
+  &--left {
+    border-right-color: @background-basic;
+
+    &::after {
+      background-image: url("../img/icon-left-arrow.svg");
+    }
+  }
+
+  &--right {
+    &::after {
+      background-image: url("../img/icon-right-arrow.svg");
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 50px;
+    height: 26px;
+    transform: translate(-50%, -50%);
+    background-repeat: no-repeat;
+    background-size: 50px 26px;
+  }
+
+  &:hover::after {
+    opacity: 0.6;
+  }
+
+  &:active::after,
+  &:focus::after {
+    opacity: 0.3;
+  }
+}
+
+.reviews__button {
+  margin-bottom: 87px;
 }

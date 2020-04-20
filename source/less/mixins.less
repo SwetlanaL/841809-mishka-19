@@ -18,11 +18,11 @@
   line-height: @line-height;
 }
 
-.outer-shadow(@x: 0, @y: 1px, @blur: 0, @spread: 0, @color: @white-two) {
+.outer-shadow(@x: 0, @y: 1px, @blur: 0, @spread: 0, @color: @border) {
   box-shadow+: @x @y @blur @spread @color;
 }
 
-.inner-shadow(@x: 0, @y: 1px, @blur: 0, @spread: 0, @color: @white-two) {
+.inner-shadow(@x: 0, @y: 1px, @blur: 0, @spread: 0, @color: @border) {
   box-shadow+: inset @x @y @blur @spread @color;
 }
 

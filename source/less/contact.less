@@ -1,0 +1,52 @@
+.contact__title {
+  display: inline-block;
+  margin-bottom: 26px;
+  .set-font(18px; 30px);
+  font-weight: 700;
+  color: @titles;
+  vertical-align: middle;
+}
+
+.contact__info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 100%;
+  margin: 0;
+  .set-font(15px; 30px);
+  overflow: visible;
+}
+
+.contact__name {
+  width: 30%;
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.contact__content {
+  width: 70%;
+  margin-left: 0;
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.contact__email {
+  padding-bottom: 0.27em;
+  color: @text;
+  border-bottom: 1px solid @accent-secondary-hover;
+
+  &:hover {
+    color: @accent-secondary-hover;
+  }
+
+  &:active {
+    color: fadeout(@accent-secondary-hover; 70%);
+    border-bottom-color: fadeout(@accent-secondary-hover; 90%);
+  }
+}

@@ -24,12 +24,15 @@
   }
 
   &--green {
+    .set-paddings(0.9em; 0; 0.9em; 0);
     color: @background-basic;
     background-color: @accent-primary;
-    border: none;
+    line-height: 16px;
+    border: 2px solid @accent-primary;
 
+    &:hover,
     &:active,
-    &:hover {
+    &:focus {
       background-color: @accent-primary-hover;
       outline: none;
     }
