@@ -1,5 +1,10 @@
+.contact {
+  width: 100%;
+}
+
 .contact__title {
   display: inline-block;
+  margin-top: 0;
   margin-bottom: 26px;
   .set-font(18px; 30px);
   font-weight: 700;
@@ -40,6 +45,8 @@
   padding-bottom: 0.27em;
   color: @text;
   border-bottom: 1px solid @accent-secondary-hover;
+  -webkit-tap-highlight-color: transparent;
+  .transition;
 
   &:hover {
     color: @accent-secondary-hover;

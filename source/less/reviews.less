@@ -1,6 +1,7 @@
-.reviews__wrapper {
-  .wrapper-basic-mobile;
-  margin-bottom: 55px;
+.reviews {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 86px;
   position: relative;
 
   &::after {
@@ -11,10 +12,14 @@
     bottom: -52px;
     height: 7px;
     background-image: url("../img/bg-zigzag-line.svg");
-    background-size: 320px 7px;
+    background-size: 100% 7px;
     background-position-x: -8px;
     background-repeat: repeat-x;
   }
+}
+
+.reviews__wrapper {
+  width: 100%;
 }
 
 .reviews__title {
@@ -48,6 +53,8 @@
   font-weight: 400;
   vertical-align: middle;
   color: @text;
+  -webkit-tap-highlight-color: transparent;
+  .transition;
 
   &:hover {
     color: @accent-secondary-hover;
@@ -62,7 +69,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 37px;
+  margin-bottom: 38px;
 }
 
 .reviews__toggle {
@@ -74,7 +81,7 @@
   background-color: inherit;
   background-repeat: no-repeat;
   background-position: center;
-  outline: none;
+  outline: transparent;
   border: 1px solid @border;
   cursor: pointer;
 
@@ -112,8 +119,4 @@
   &:focus::after {
     opacity: 0.3;
   }
-}
-
-.reviews__button {
-  margin-bottom: 87px;
 }

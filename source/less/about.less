@@ -1,17 +1,42 @@
-.about__wrapper {
-  .wrapper-basic-mobile;
+.about {
+  width: 100%;
   margin-bottom: 55px;
+
+  // @media @desktop {
+  //   margin-left: 175px;
+  // }
 }
 
 .about__title {
   margin-bottom: 86px;
+
+  @media @tablet {
+    margin-bottom: 102px;
+  }
+
+  @media @desktop {
+    padding-left: 175px;
+  }
 }
 
 .about__features-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   .list-reset;
+
+  @media @tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @media @desktop {
+    padding-left: 175px;
+  }
 }
 
 .about__item {
+  position: relative;
   margin-bottom: 83px;
   .set-font(17px; 20px);
   color: @titles;
@@ -19,5 +44,55 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media @tablet {
+    .set-font(20px; 22px);
+    width: 50%;
+    margin-bottom: 110px;
+
+    &:nth-last-child(-n+2) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media @desktop {
+    width: 40%;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 55px;
+    height: 37px;
+    top: 0;
+    left: 0;
+    transform: translate(-9%, -148%);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--ecology::before {
+    background-image: url("../img/icon-feature-flower.svg");
+  }
+
+  &--price::before {
+    background-image: url("../img/icon-feature-money.svg");
+  }
+
+  &--likes::before {
+    background-image: url("../img/icon-feature-heart.svg");
+  }
+
+  &--love::before {
+    background-image: url("../img/icon-feature-ball.svg");
+  }
+
+  &--support::before {
+    background-image: url("../img/icon-feature-rocket.svg");
+  }
+
+  &--packing::before {
+    background-image: url("../img/icon-feature-gift.svg");
   }
 }

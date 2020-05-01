@@ -8,8 +8,24 @@
   background-color: @page-title-background;
 }
 
+// для планшета и десктопа:
+.page-footer__logo {
+  display: none;
+  width: 33.2%;
+  margin-top: 23px;
+  margin-left: 116px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .page-footer__social {
-  .wrapper-basic-mobile(60%);
+  width: 60%;
   margin-bottom: 24px;
 }
 
@@ -40,6 +56,8 @@
   .text-indent;
   background-repeat: no-repeat;
   background-position: center;
+  -webkit-tap-highlight-color: transparent;
+  .transition;
   // Иконки здесь временно, потом, видимо, поставлю в html:
   &--instagram {
     background-image: url("../img/icon-insta.svg");
@@ -63,4 +81,6 @@
   .set-font(19px; 18px);
   font-weight: 700;
   color: @titles;
+  -webkit-tap-highlight-color: transparent;
+  .transition;
 }

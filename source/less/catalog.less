@@ -1,24 +1,85 @@
 .catalog {
-  .wrapper-basic-mobile;
+  margin-bottom: 30px;
 }
 
 .catalog__list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   .list-reset;
+
+  @media @desktop {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .catalog__item {
   position: relative;
+  width: 260px;
+  margin: 0 auto 30px;
+
+  @media @tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  @media @desktop {
+    width: 316px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    &:nth-child(-n+3) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.catalog__image-container {
   width: 100%;
-  margin-bottom: 30px;
+  height: 195px;
+
+  @media @tablet {
+    width: 334px;
+    height: 334px;
+  }
+
+  @media @desktop {
+    width: 316px;
+    height: 462px;
+  }
+}
+
+.catalog__image {
+  width: 100%;
+  background-color: @image-fallback;
 }
 
 .catalog__item-link {
-  display: block;
+  display: flex;
+  flex-direction: column;
   .set-paddings(0; 1.87em; 0; 1.87em);
   border: 1px solid @border;
+
+  @media @tablet {
+    flex-grow: 1;
+    height: 334px;
+  }
+
+  @media @desktop {
+    height: 198px;
+  }
 }
 
 .catalog__item-title {
+  display: block;
+  width: 100%;
   margin-top: 27px;
   margin-bottom: 6px;
   .set-font(17px; 24px);
@@ -28,32 +89,39 @@
 
 .catalog__item-description {
   display: inline-block;
-  margin-bottom: 11px;
+  margin-bottom: 22px;
   .set-font(13px; 30px);
   font-weight: 400;
   color: @text;
   vertical-align: middle;
-}
 
-.catalog__item-divider {
-  margin-bottom: 21px;
-  border: 0;
-  height: 1px;
-  background-color: @border;
+  @media @tablet {
+    margin-bottom: auto;
+    font-size: 15px;
+  }
 }
 
 .catalog__item-price {
-  display: inline-block;
-  margin-bottom: 26px;
+  width: 100%;
+  display: block;
+  margin-top: auto;
+  margin-bottom: 28px;
+  padding-top: 22px;
   .set-font(15px; 24px);
   font-weight: 700;
   color: @titles;
-  vertical-align: middle;
+  border-top: 1px solid @border;
+
+  @media @tablet {
+    font-size: 17px;
+  }
 }
 
 .catalog__cart-button {
-  display: block;
   position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
   width: 32px;
   height: 32px;
   .text-indent;

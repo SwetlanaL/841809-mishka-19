@@ -1,0 +1,127 @@
+.main-nav {
+  position: relative;
+  width: 100%;
+
+  &--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  &--nojs .site-list__item,
+  &--nojs .user-list__item {
+    display: block;
+  }
+}
+
+.main-nav__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media @tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-155%, -350%);
+  z-index: 1;
+  display: block;
+  width: 20px;
+  height: 14px;
+  .text-indent;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  .transition;
+  -webkit-tap-highlight-color: transparent;
+
+  &:focus {
+    outline: transparent;
+  }
+
+  @media @tablet {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background-color: @titles;
+  box-shadow: 0 6px 0 0 @titles, 0 12px 0 0 @titles;
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: fadeout(@titles; 70%);
+  box-shadow: 0 6px 0 0 fadeout(@titles; 70%), 0 12px 0 0 fadeout(@titles; 70%);
+}
+
+.main-nav--open .main-nav__toggle::before,
+.main-nav--open .main-nav__toggle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 28px;
+  height: 3px;
+  background-color: @titles;
+}
+
+.main-nav--open .main-nav__toggle::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.main-nav--open .main-nav__toggle::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.main-nav--open .main-nav__toggle:active::before,
+.main-nav--open .main-nav__toggle:active::after {
+  background-color: fadeout(@titles; 70%);
+}
+
+.main-nav__list {
+  .list-reset;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @media @tablet {
+    flex-direction: row;
+  }
+}
+
+@media @mobile-only {
+  .main-nav--closed .site-list__item {
+    display: none;
+  }
+
+  .main-nav--closed .user-list__item {
+    display: none;
+  }
+}
+
+.main-nav__text {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  @media @tablet {
+    display: block;
+    width: 232px;
+    transform: translate(-50px, 105px);
+  }
+
+  @media @desktop {
+    order: 1;
+  }
+}
