@@ -69,11 +69,6 @@
 
   @media @tablet {
     flex-grow: 1;
-    height: 334px;
-  }
-
-  @media @desktop {
-    height: 198px;
   }
 }
 
@@ -85,6 +80,14 @@
   .set-font(17px; 24px);
   font-weight: 700;
   color: @titles;
+
+  @media @tablet {
+    width: 60%;
+  }
+
+  @media @desktop {
+    width: 100%;
+  }
 }
 
 .catalog__item-description {

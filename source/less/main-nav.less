@@ -25,67 +25,65 @@
 
 .main-nav__toggle {
   position: absolute;
-  top: 0;
-  right: 0;
-  transform: translate(-155%, -350%);
-  z-index: 1;
-  display: block;
-  width: 20px;
-  height: 14px;
-  .text-indent;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-2200%);
+  width: 21px;
+  height: 21px;
+  padding: 0;
+  border: 0;
   background-color: transparent;
-  cursor: pointer;
-  border: none;
-  .transition;
-  -webkit-tap-highlight-color: transparent;
+  .text-indent;
+  z-index: 1;
 
-  &:focus {
-    outline: transparent;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 28px;
+    height: 3px;
+    background-color: @titles;
+    .transition;
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fadeout(@titles, 70%);
+    box-shadow: 0 6px 0 0 fadeout(@titles, 70%), 0 12px 0 0 fadeout(@titles, 70%);
   }
 
   @media @tablet {
     display: none;
   }
-}
 
-.main-nav--closed .main-nav__toggle::before {
-  content: "";
-  position: absolute;
-  top: 1px;
-  left: 0;
-  width: 20px;
-  height: 2px;
-  background-color: @titles;
-  box-shadow: 0 6px 0 0 @titles, 0 12px 0 0 @titles;
-}
+  &--off {
+    transform: translateY(-250%);
 
-.main-nav--closed .main-nav__toggle:active::before {
-  background-color: fadeout(@titles; 70%);
-  box-shadow: 0 6px 0 0 fadeout(@titles; 70%), 0 12px 0 0 fadeout(@titles; 70%);
-}
+    &::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 2px;
+      box-shadow: 0 6px 0 0 @titles, 0 12px 0 0 @titles;
+    }
 
-.main-nav--open .main-nav__toggle::before,
-.main-nav--open .main-nav__toggle::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 28px;
-  height: 3px;
-  background-color: @titles;
-}
-
-.main-nav--open .main-nav__toggle::before {
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.main-nav--open .main-nav__toggle::after {
-  transform: translate(-50%, -50%) rotate(-45deg);
-}
-
-.main-nav--open .main-nav__toggle:active::before,
-.main-nav--open .main-nav__toggle:active::after {
-  background-color: fadeout(@titles; 70%);
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .main-nav__list {

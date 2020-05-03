@@ -35,7 +35,6 @@
   font-weight: 400;
   color: @text;
   border-style: hidden;
-  outline: transparent;
   border-bottom: 2px solid @titles;
   appearance: none;
   .transition;
@@ -49,8 +48,8 @@
   &:active,
   &:focus,
   &:hover {
-    outline: transparent;
     border-color: @form-borders;
+    outline: none;
   }
 
   &:required {
@@ -88,8 +87,8 @@
   &:active,
   &:focus,
   &:hover {
-    outline: transparent;
     border-color: @form-borders;
+    outline: none;
   }
 
   &:required {

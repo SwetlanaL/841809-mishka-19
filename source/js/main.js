@@ -3,13 +3,8 @@ var mainNav = document.querySelector('.main-nav');
 
 mainNav.classList.remove('main-nav--nojs');
 
-mobileMenuButton.addEventListener('click', function(evt) {
-  evt.preventDefault();
-  if (mainNav.classList.contains('main-nav--closed')) {
-    mainNav.classList.remove('main-nav--closed');
-    mainNav.classList.add('main-nav--open');
-  } else {
-    mainNav.classList.remove('main-nav--open');
-    mainNav.classList.add('main-nav--closed');
-  }
+mobileMenuButton.addEventListener('click', function() {
+  mainNav.classList.toggle('main-nav--closed');
+  mainNav.classList.toggle('main-nav');
+  this.classList.toggle('main-nav__toggle--off');
 });
