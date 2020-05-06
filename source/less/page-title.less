@@ -1,6 +1,45 @@
 .page-title {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  .set-paddings(2.6em; 0; 2.8em; 0);
   .set-font(27px; 30px);
   color: @page-title;
   font-weight: 700;
   text-align: center;
+  background-color: @page-title-background;
+
+  &::after {
+    content: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-repeat: repeat-x;
+
+    @media @tablet {
+      content: "";
+      position: absolute;
+      bottom: -12px;
+      height: 24px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-size: 768px 24px;
+      background-position-x: 0;
+    }
+
+    @media @desktop {
+      bottom: -17px;
+      height: 34px;
+      background-size: 1150px 34px;
+    }
+  }
+
+  @media @tablet {
+    .set-font(43px; 50px);
+  }
+
+  @media @desktop {
+    .set-font(53px; 57px);
+  }
 }

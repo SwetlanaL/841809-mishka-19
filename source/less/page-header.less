@@ -1,12 +1,16 @@
 .page-header {
-  .wrapper-basic-mobile(100%);
+  width: 100%;
+  margin-bottom: 0;
 }
 
 .page-header__logo {
   display: block;
-  width: 33.2%;
+  width: 86px;
+  height: 35px;
+  margin: 0 auto;
   margin-top: 23px;
-  margin-left: 116px;
+  margin-bottom: 23px;
+  text-align: center;
 
   &:hover {
     opacity: 0.6;
@@ -14,5 +18,21 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media @tablet {
+    width: 112px;
+    height: 46px;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    z-index: 1;
+  }
+
+  @media @desktop {
+    width: 149px;
+    height: 72px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

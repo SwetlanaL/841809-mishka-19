@@ -1,0 +1,125 @@
+.main-nav {
+  position: relative;
+  width: 100%;
+
+  &--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  &--nojs .site-list__item,
+  &--nojs .user-list__item {
+    display: block;
+  }
+}
+
+.main-nav__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media @tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-2200%);
+  width: 21px;
+  height: 21px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  .text-indent;
+  z-index: 1;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 28px;
+    height: 3px;
+    background-color: @titles;
+    .transition;
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fadeout(@titles, 70%);
+    box-shadow: 0 6px 0 0 fadeout(@titles, 70%), 0 12px 0 0 fadeout(@titles, 70%);
+  }
+
+  @media @tablet {
+    display: none;
+  }
+
+  &--off {
+    transform: translateY(-250%);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 2px;
+      box-shadow: 0 6px 0 0 @titles, 0 12px 0 0 @titles;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.main-nav__list {
+  .list-reset;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @media @tablet {
+    flex-direction: row;
+  }
+}
+
+@media @mobile-only {
+  .main-nav--closed .site-list__item {
+    display: none;
+  }
+
+  .main-nav--closed .user-list__item {
+    display: none;
+  }
+}
+
+.main-nav__text {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  @media @tablet {
+    display: block;
+    width: 232px;
+    transform: translate(-50px, 105px);
+  }
+
+  @media @desktop {
+    order: 1;
+  }
+}

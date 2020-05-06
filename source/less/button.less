@@ -1,6 +1,7 @@
 .button {
   display: block;
-  .wrapper-basic-mobile(100%);
+  width: 100%;
+  margin: 0 auto;
   .set-paddings(0.82em; 0.59em; 0.82em; 0.59em);
   .set-font(17px; 20px);
   font-weight: 700;
@@ -20,7 +21,6 @@
   &:active {
     color: fadeout(@background-basic; 70%);
     background-color: @text;
-    outline: none;
   }
 
   &--green {
@@ -30,11 +30,10 @@
     line-height: 16px;
     border: 2px solid @accent-primary;
 
-    &:hover,
     &:active,
-    &:focus {
+    &:focus,
+    &:hover {
       background-color: @accent-primary-hover;
-      outline: none;
     }
   }
 }

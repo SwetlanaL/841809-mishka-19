@@ -1,4 +1,14 @@
-.wrapper-basic-mobile(@width: 81%) {
+.wrapper-basic-mobile(@width: 81.25%) {
+  width: @width;
+  margin: 0 auto;
+}
+
+.wrapper-basic-tablet(@width: 86.53%) {
+  width: @width;
+  margin: 0 auto;
+}
+
+.wrapper-basic-desktop(@width: 91.31%) {
   width: @width;
   margin: 0 auto;
 }
@@ -34,6 +44,6 @@
   text-indent: @value;
 }
 
-.transition(@property: all, @duration: 0.6s, @function: ease-in) {
+.transition(@property: all, @duration: 0.4s, @function: ease-in) {
   transition: @arguments;
 }

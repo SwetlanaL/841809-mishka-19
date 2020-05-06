@@ -35,9 +35,9 @@
   font-weight: 400;
   color: @text;
   border-style: hidden;
-  outline: none;
   border-bottom: 2px solid @titles;
   appearance: none;
+  .transition;
 
   &::placeholder {
     .set-paddings(20px; 0; 10px; 0);
@@ -48,8 +48,8 @@
   &:active,
   &:focus,
   &:hover {
-    outline: none;
     border-color: @form-borders;
+    outline: none;
   }
 
   &:required {
@@ -78,6 +78,7 @@
   background-color: @background-basic;
   border: 2px solid @titles;
   resize: none;
+  .transition;
 
   &::placeholder {
     color: fadeout(@text, 70%);
@@ -86,8 +87,8 @@
   &:active,
   &:focus,
   &:hover {
-    outline: none;
     border-color: @form-borders;
+    outline: none;
   }
 
   &:required {
