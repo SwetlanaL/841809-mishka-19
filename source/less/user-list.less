@@ -3,13 +3,12 @@
     display: flex;
     justify-content: flex-end;
     width: 50%;
-    margin-left: 50%;
+    margin-left: auto;
     background-color: @background-basic;
   }
 
   @media @desktop {
     width: 40%;
-    margin-left: auto;
     order: 1;
   }
 }
@@ -23,8 +22,11 @@
   @media @tablet {
     box-shadow: none;
     border-left: 1px solid @border;
-    padding-right: 50px;
     text-align: right;
+  }
+
+  @media @desktop {
+    padding-right: 0;
   }
 
   &--search {

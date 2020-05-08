@@ -3,7 +3,6 @@
     display: flex;
     flex-wrap: wrap;
     width: 52%;
-    padding-left: 50px;
     order: 1;
   }
 
@@ -38,7 +37,7 @@
   .transition;
 
   @media @tablet {
-    .set-font(15px; 24px);
+    font-size: 15px;
     margin-left: 0;
   }
 
@@ -48,10 +47,5 @@
 
   &:active {
     color: fadeout(@titles; 70%);
-  }
-
-  @media @tablet {
-    .set-font(15px; 24px);
-    margin-left: none;
   }
 }

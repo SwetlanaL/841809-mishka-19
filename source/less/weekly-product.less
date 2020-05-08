@@ -1,6 +1,12 @@
 .weekly-product {
+  width: 100%;
+  margin-top: 27px;
   margin-bottom: 55px;
   position: relative;
+
+  @media @tablet {
+    margin-bottom: 126px;
+  }
 
   &::after {
     content: "";
@@ -10,21 +16,29 @@
     bottom: -42px;
     height: 7px;
     background-image: url("../img/bg-zigzag-line.svg");
-    background-size: 100% 7px;
+    background-size: 320px 7px;
     background-position-x: -8px;
     background-repeat: repeat-x;
-  }
-}
 
-.weekly-product__wrapper {
-  width: 100%;
-  margin-top: 27px;
+    @media @tablet {
+      height: 17px;
+      background-size: 768px 17px;
+      background-position-x: -20px;
+    }
+
+    @media @desktop {
+      left: 50px;
+      right: 50px;
+      height: 23px;
+      background-size: 1050px 21px;
+      background-position-x: -25px;
+    }
+  }
 }
 
 .weekly-product__title-wrapper {
   width: 100%;
   margin-bottom: 8px;
-  margin-right: 30px;
 
   @media @tablet {
     display: flex;
@@ -53,6 +67,7 @@
   @media @tablet {
     line-height: 17px;
     width: 70px;
+    margin-right: 30px;
     text-align: center;
   }
 
@@ -82,7 +97,9 @@
   width: 100%;
 
   @media @tablet {
-    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
@@ -92,30 +109,32 @@
   @media @tablet {
     width: 42%;
     margin-top: 0;
+    margin-right: 58%;
     margin-bottom: 48px;
     .set-font(17px; 30px);
   }
 
   @media @desktop {
-    width: 27%;
+    width: 284px;
+    margin-bottom: 64px;
     margin-left: 175px;
-    margin-bottom: 66px;
   }
 }
 
 .weekly-product__table {
   width: 100%;
   margin-bottom: 30px;
+  font: inherit;
   line-height: 20px;
   border-collapse: collapse;
 
   @media @tablet {
-    width: 42%;
+    width: 44%;
     margin-bottom: 54px;
   }
 
   @media @desktop {
-    width: 27%;
+    width: 290px;
     margin-left: 175px;
     margin-bottom: 110px;
   }
@@ -136,18 +155,18 @@
   margin-bottom: 30px;
 
   @media @tablet {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-bottom: 0;
     width: 333px;
     height: 404px;
+    order: 1;
+    margin-top: -135px;
+    margin-bottom: 0;
   }
 
   @media @desktop {
     width: 525px;
     height: 636px;
-    top: -143px;
+    margin-top: -290px;
+    margin-right: 50px;
     z-index: -1;
   }
 }
@@ -174,26 +193,30 @@
   text-align: center;
 
   @media @tablet {
-    width: 42%;
-    margin: 0;
-    margin-bottom: 32px;
+    width: 44%;
+    margin-top: -118px;
+    margin-left: 0;
     font-size: 20px;
+    order: 1;
   }
 
   @media @desktop {
-    width: 27%;
+    width: 290px;
     margin-left: 175px;
+    margin-bottom: 48px;
   }
 }
 
 .weekly-product__order-button {
   @media @tablet {
-    width: 42%;
-    margin: 0;
+    width: 44%;
+    order: 1;
+    margin-top: -50px;
+    margin-right: 56%;
   }
 
   @media @desktop {
-    width: 27%;
+    width: 290px;
     margin-left: 175px;
   }
 }

@@ -5,6 +5,11 @@
 .email-list__item {
   margin-top: 0;
 
+  @media @tablet {
+    display: flex;
+    align-items: baseline;
+  }
+
   &--name {
     margin-bottom: 22px;
   }
@@ -24,6 +29,10 @@
 
 .email-list__label {
   display: block;
+
+  @media @tablet {
+    margin-right: 26px;
+  }
 }
 
 .email-list__control {
@@ -38,6 +47,7 @@
   border-bottom: 2px solid @titles;
   appearance: none;
   .transition;
+
 
   &::placeholder {
     .set-paddings(20px; 0; 10px; 0);
@@ -63,6 +73,10 @@
   &--email,
   &--tel {
     .set-paddings(21px; 0; 16px; 0);
+
+    @media @tablet {
+      background-color: @page-title-background;
+    }
   }
 }
 

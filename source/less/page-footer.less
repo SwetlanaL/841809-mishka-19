@@ -1,22 +1,49 @@
 .page-footer {
+  width: 100%;
+  background-color: @page-title-background;
+}
+
+.page-footer__wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  .wrapper-basic-mobile(100%);
-  .set-paddings(25px; 0; 32px; 0);
-  background-color: @page-title-background;
+  width: 100%;
+  .set-paddings(25px; 30px; 32px; 30px);
+
+  @media @tablet {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    .set-paddings(62px; 50px; 58px; 50px);
+  }
+
+  @media @desktop {
+    width: 1050px;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
-// для планшета и десктопа:
 .page-footer__logo {
   display: none;
-  width: 33.2%;
-  margin-top: 23px;
-  margin-left: 116px;
+  width: 102px;
+  height: 34px;
+
+  @media @tablet {
+    display: block;
+    margin-right: 83px;
+  }
+}
+
+.page-footer__logo-image {
+  width: 102px;
+  height: 34px;
+  fill: black;
+
 
   &:hover {
-    opacity: 0.6;
+    fill: @accent-secondary-hover;
   }
 
   &:active {
@@ -39,6 +66,12 @@
   @color: fadeout(@text, 90%);
   border-bottom: 1px solid @color;
   .list-reset;
+
+  @media @tablet {
+    width: 300px;
+    border: none;
+    padding-bottom: 0;
+  }
 }
 
 .page-footer__social-item {
@@ -74,6 +107,11 @@
 .page-footer__copyright {
   width: 57%;
   margin-top: 26px;
+
+  @media @tablet {
+    width: 184px;
+    margin-top: 0;
+  }
 }
 
 .page-footer__copyright-link {

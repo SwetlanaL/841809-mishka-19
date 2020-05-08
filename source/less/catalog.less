@@ -1,5 +1,13 @@
 .catalog {
   margin-bottom: 30px;
+
+  @media @tablet {
+    margin-bottom: 50px;
+  }
+
+  @media @desktop {
+    margin-bottom: 54px;
+  }
 }
 
 .catalog__list {
@@ -65,10 +73,15 @@
   display: flex;
   flex-direction: column;
   .set-paddings(0; 1.87em; 0; 1.87em);
-  border: 1px solid @border;
 
   @media @tablet {
     flex-grow: 1;
+    width: 50%;
+  }
+
+  @media @desktop {
+    width: 100%;
+    min-height: 197px;
   }
 }
 
@@ -82,7 +95,7 @@
   color: @titles;
 
   @media @tablet {
-    width: 60%;
+    width: 80%;
   }
 
   @media @desktop {
@@ -107,7 +120,6 @@
 .catalog__item-price {
   width: 100%;
   display: block;
-  margin-top: auto;
   margin-bottom: 28px;
   padding-top: 22px;
   .set-font(15px; 24px);
