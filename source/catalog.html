@@ -18,8 +18,8 @@
         <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Логотип интернет-магазина Мишка" width="86" height="35">
       </picture>
     </a>
+    <button class="main-nav__toggle main-nav__toggle--off" type="button">Открыть меню</button>
     <nav class="main-nav main-nav--closed main-nav--nojs">
-      <button class="main-nav__toggle main-nav__toggle--off" type="button">Открыть меню</button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item"><a class="site-list__link">Каталог товаров</a></li>
@@ -114,10 +114,12 @@
             <svg class="video__play-button-image" width="101" height="77"></svg>
           </a>
         </div>
-        <a class="video__link product-link" href="#">
-          <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о&nbsp;том, как появляются наши товары.</p>
-        </a>
-        <a class="video__order-button button" href="cart.html">Сделать заказ</a>
+        <div class="video__link-wrapper product-link">
+          <a class="video__link" href="#">
+            <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о&nbsp;том, как появляются наши товары.</p>
+          </a>
+          <a class="video__order-button button" href="cart.html">Сделать заказ</a>
+        </div>
       </div>
     </section>
   </main>

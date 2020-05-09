@@ -1,5 +1,13 @@
 .video {
   margin-bottom: 58px;
+
+  @media @tablet {
+    margin-bottom: 17rem;
+  }
+
+  @media @desktop {
+    margin-bottom: 6.5rem;
+  }
 }
 
 .video__wrapper {
@@ -16,7 +24,8 @@
   }
 
   @media @desktop {
-    display: block;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
   }
 }
@@ -43,21 +52,25 @@
     background-image: url("../img/icon-video.svg");
     background-repeat: no-repeat;
     background-size: contain;
+
+    @media @desktop {
+      left: 100px;
+      top: -10%;
+    }
   }
 
   @media @tablet {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(400%);
-    z-index: 1;
-    .set-font(20px; 24px);
     width: 100%;
+    margin-top: -15.6rem;
+    margin-left: 1rem;
+    .set-font(20px; 24px);
+    order: 1;
   }
 
   @media @desktop {
     width: 30%;
-    transform: translate(218%, -450%);
+    margin-top: -21.6rem;
+    margin-left: 41rem;
   }
 }
 
@@ -74,9 +87,6 @@
   }
 
   @media @desktop {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 682px;
   }
 }
@@ -84,9 +94,11 @@
 .video__content {
   width: 100%;
   height: 100%;
+  background-color: @accent-secondary;
   background-image: url("../img/video-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-color: @image-fallback;
+  background-clip: content-box;
+
 
   @media @tablet {
     background-image: url("../img/video-tablet@1x.jpg");
@@ -120,50 +132,35 @@
   }
 }
 
-.video__link {
-  width: 100%;
-  display: block;
-  .set-paddings(1.8em; 2.2em; 7.2em; 2.2em);
+.video__link-wrapper {
+  .set-paddings(1.8em; 2.2em; 1.8em; 2.2em);
 
   @media @tablet {
-    padding-top: 100px;
-    padding-bottom: 136px;
+    .set-paddings(104px; 43px; 46px; 43px);
+    border: 1px solid @border;
   }
 
   @media @desktop {
     width: 368px;
-    margin-left: auto;
-    min-height: 455px;
+    .set-paddings(182px; 64px; 58px; 76px);
   }
 }
 
 .video__description {
-  margin: 0;
+  margin-bottom: 26px;
   .set-font(13px; 24px);
   font-weight: 400;
   color: @text;
 
   @media @tablet {
-    width: 98%;
     .set-font(15px; 30px);
   }
 }
 
 .video__order-button {
-  width: 192px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  transform: translate(18%, -45%);
-  z-index: 1;
-
-  @media @tablet {
-    width: 584px;
-    transform: translate(7%, -80%);
-  }
+  width: 100%;
 
   @media @desktop {
     width: 230px;
-    transform: translate(310%, -80%);
   }
 }

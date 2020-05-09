@@ -1,6 +1,7 @@
 .main-nav {
   position: relative;
   width: 100%;
+  z-index: 1;
 
   &--nojs .main-nav__toggle {
     display: none;
@@ -33,9 +34,8 @@
 
 .main-nav__toggle {
   position: absolute;
+  top: 4px;
   right: 30px;
-  top: 50%;
-  transform: translateY(-2270%);
   width: 21px;
   height: 21px;
   padding: 0;
@@ -75,8 +75,6 @@
   }
 
   &--off {
-    transform: translateY(-250%);
-
     &::before {
       content: "";
       position: absolute;
