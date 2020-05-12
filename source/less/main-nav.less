@@ -1,6 +1,7 @@
 .main-nav {
   position: relative;
   width: 100%;
+  z-index: 1;
 
   &--nojs .main-nav__toggle {
     display: none;
@@ -20,14 +21,21 @@
   @media @tablet {
     flex-direction: row;
     flex-wrap: wrap;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @media @desktop {
+    width: 1050px;
+    margin: 0 auto;
+    padding: 0;
   }
 }
 
 .main-nav__toggle {
   position: absolute;
+  top: 4px;
   right: 30px;
-  top: 50%;
-  transform: translateY(-2200%);
   width: 21px;
   height: 21px;
   padding: 0;
@@ -67,8 +75,6 @@
   }
 
   &--off {
-    transform: translateY(-250%);
-
     &::before {
       content: "";
       position: absolute;
@@ -109,17 +115,18 @@
 
 .main-nav__text {
   display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
+  .set-paddings(20px; 0; 20px; 0);
+  text-align: right;
 
   @media @tablet {
     display: block;
-    width: 232px;
-    transform: translate(-50px, 105px);
+    order: 2;
+    width: 48%;
   }
 
   @media @desktop {
-    order: 1;
+    width: 500px;
+    margin-left: auto;
+    order: 4;
   }
 }

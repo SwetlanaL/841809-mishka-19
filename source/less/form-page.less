@@ -1,9 +1,25 @@
 .form-page__title {
   margin-bottom: 22px;
+
+  @media @tablet {
+    margin-bottom: 78px;
+  }
 }
 
 .form-page__request {
   display: block;
   margin-bottom: 24px;
   .set-font(13px; 24px);
+
+  @media @tablet {
+    width: 712px;
+    margin-left: 50px;
+    padding: 0;
+    .set-font(17px; 30px);
+  }
+
+  @media @desktop {
+    width: 672px;
+    margin: 0 auto;
+  }
 }

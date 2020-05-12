@@ -1,25 +1,70 @@
 .contact {
   width: 100%;
+
+  @media @desktop {
+    width: 50%;
+    margin: 0;
+    margin-left: auto;
+    padding-top: 27px;
+    padding-left: 125px;
+  }
 }
 
 .contact__title {
-  display: inline-block;
+  position: relative;
+  display: block;
+  width: 100%;
   margin-top: 0;
   margin-bottom: 26px;
   .set-font(18px; 30px);
   font-weight: 700;
   color: @titles;
-  vertical-align: middle;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 50%;
+    right: 3px;
+    transform: translateY(-50%);
+    width: 47px;
+    height: 82px;
+    background-image: url("../img/icon-flag.svg");
+    background-repeat: no-repeat;
+
+    @media @tablet {
+      display: block;
+    }
+
+    @media @desktop {
+      left: -112px;
+      right: auto;
+    }
+  }
+
+  @media @tablet {
+    .set-font(43px; 50px);
+  }
+
+  @media @desktop {
+    .set-font(53px; 57px);
+  }
 }
 
 .contact__info {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
   width: 100%;
   margin: 0;
+  margin-bottom: 38px;
   .set-font(15px; 30px);
   overflow: visible;
+
+  @media @tablet {
+    justify-content: space-between;
+    margin-bottom: 58px;
+    .set-font(17px; 30px);
+  }
 }
 
 .contact__name {
@@ -29,15 +74,32 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  @media @tablet {
+    width: 10%;
+  }
+
+  @media @desktop {
+    width: 30%;
+  }
 }
 
 .contact__content {
   width: 70%;
-  margin-left: 0;
+  margin-left: auto;
   margin-bottom: 30px;
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media @tablet {
+    width: 40%;
+    margin-left: none;
+  }
+
+  @media @desktop {
+    width: 70%;
   }
 }
 
