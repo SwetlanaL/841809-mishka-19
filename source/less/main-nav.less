@@ -21,74 +21,14 @@
   @media @tablet {
     flex-direction: row;
     flex-wrap: wrap;
-    padding-left: 50px;
-    padding-right: 50px;
+    align-items: center;
   }
 
   @media @desktop {
+    justify-content: space-between;
     width: 1050px;
     margin: 0 auto;
     padding: 0;
-  }
-}
-
-.main-nav__toggle {
-  position: absolute;
-  top: 4px;
-  right: 30px;
-  width: 21px;
-  height: 21px;
-  padding: 0;
-  border: 0;
-  background-color: transparent;
-  .text-indent;
-  z-index: 1;
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 28px;
-    height: 3px;
-    background-color: @titles;
-    .transition;
-  }
-
-  &::before {
-    transform: translate(-50%, -50%) rotate(45deg);
-  }
-
-  &::after {
-    transform: translate(-50%, -50%) rotate(-45deg);
-  }
-
-  &:active::before,
-  &:active::after {
-    background-color: fadeout(@titles, 70%);
-    box-shadow: 0 6px 0 0 fadeout(@titles, 70%), 0 12px 0 0 fadeout(@titles, 70%);
-  }
-
-  @media @tablet {
-    display: none;
-  }
-
-  &--off {
-    &::before {
-      content: "";
-      position: absolute;
-      top: 4px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 20px;
-      height: 2px;
-      box-shadow: 0 6px 0 0 @titles, 0 12px 0 0 @titles;
-    }
-
-    &::after {
-      display: none;
-    }
   }
 }
 
@@ -115,18 +55,19 @@
 
 .main-nav__text {
   display: none;
-  .set-paddings(20px; 0; 20px; 0);
+  .set-paddings(1.2em; 0; 1.5em; 0);
   text-align: right;
 
   @media @tablet {
     display: block;
     order: 2;
-    width: 48%;
+    width: 52.5%;
   }
 
   @media @desktop {
     width: 500px;
     margin-left: auto;
+    padding-top: 0.8em;
     order: 4;
   }
 }

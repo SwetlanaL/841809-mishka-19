@@ -2,11 +2,11 @@
   margin-bottom: 58px;
 
   @media @tablet {
-    margin-bottom: 17rem;
+    margin-bottom: 16.4rem;
   }
 
   @media @desktop {
-    margin-bottom: 6.5rem;
+    margin-bottom: 6.625rem;
   }
 }
 
@@ -44,8 +44,8 @@
   &::before {
     content: "";
     position: absolute;
-    left: 33px;
     top: 50%;
+    left: 33px;
     transform: translateY(-50%);
     width: 32px;
     height: 32px;
@@ -53,23 +53,33 @@
     background-repeat: no-repeat;
     background-size: contain;
 
+    @media @tablet {
+      left: 38px;
+    }
+
     @media @desktop {
-      left: 100px;
       top: -10%;
+      left: 100px;
+    }
+
+    @media @desktop {
+      top: -78%;
+      left: 106px;
     }
   }
 
   @media @tablet {
     width: 100%;
     margin-top: -15.6rem;
-    margin-left: 1rem;
+    margin-left: 0.1rem;
     .set-font(20px; 24px);
     order: 1;
   }
 
   @media @desktop {
     width: 30%;
-    margin-top: -21.6rem;
+    margin-top: -22.5rem;
+    margin-bottom: auto;
     margin-left: 41rem;
   }
 }
@@ -111,8 +121,8 @@
 
 .video__play-button {
   position: absolute;
-  left: 50%;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   width: 101px;
   height: 77px;
@@ -120,6 +130,7 @@
   background-image: url("../img/icon-play.svg");
   .text-indent;
   cursor: pointer;
+  .transition(all, 0.8s, ease-in-out);
 
 
   &:hover {
@@ -133,16 +144,16 @@
 }
 
 .video__link-wrapper {
-  .set-paddings(1.8em; 2.2em; 1.8em; 2.2em);
+  .set-paddings(0.9em; 2.2em; 2.1em; 2.2em);
 
   @media @tablet {
-    .set-paddings(104px; 43px; 46px; 43px);
+    padding: 5.3em 2.5em 3em 2.5em;
     border: 1px solid @border;
   }
 
   @media @desktop {
     width: 368px;
-    .set-paddings(182px; 64px; 58px; 76px);
+    .set-paddings(10.7em; 3.8em; 4em; 5.25em);
   }
 }
 
@@ -153,12 +164,22 @@
   color: @text;
 
   @media @tablet {
+    margin-bottom: 35px;
     .set-font(15px; 30px);
+  }
+
+  @media @desktop {
+    margin-bottom: 45px;
   }
 }
 
 .video__order-button {
   width: 100%;
+
+  @media @tablet {
+    width: 99%;
+    margin: 0;
+  }
 
   @media @desktop {
     width: 230px;

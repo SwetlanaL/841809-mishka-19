@@ -2,27 +2,29 @@
   @media @tablet {
     display: flex;
     justify-content: flex-end;
-    width: 50%;
-    margin-left: auto;
+    width: 52.5%;
+    margin-left: 47.5%;
     background-color: @background-basic;
   }
 
   @media @desktop {
-    width: 40%;
+    width: 33.3%;
+    margin-left: 0;
     order: 1;
   }
 }
 
 .user-list__item {
   width: 100%;
-  .set-paddings(1.75em; 0; 1.9em; 0);
+  .set-paddings(1.75em; 0; 1.9em; 2em);
   .outer-shadow;
   .inner-shadow;
 
   @media @tablet {
-    box-shadow: none;
-    border-left: 1px solid @border;
+    .set-paddings(2.05em; 0; 2.2em; 0);
     text-align: right;
+    border-left: 1px solid @border;
+    box-shadow: none;
   }
 
   @media @desktop {
@@ -31,21 +33,22 @@
 
   &--search {
     @media @tablet {
-      width: 17.5%;
+      width: 23.5%;
     }
   }
 
   &--cart {
     @media @tablet {
-      width: 82.5%;
+      width: 76.5%;
     }
   }
 }
 
 .user-list__link {
-  display: block;
-  position: relative;
-  margin-left: 4.4em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
   .set-font(17px; 24px);
   font-weight: 700;
   color: @titles;
@@ -58,43 +61,57 @@
   &:active {
     color: fadeout(@titles; 70%);
   }
+
+  &:hover .user-list__link-image {
+    fill: @accent-primary;
+  }
+
+  &:active .user-list__link-image {
+    opacity: 0.3;
+  }
+
+  @media @tablet {
+    &--cart {
+      justify-content: flex-end;
+    }
+  }
+
+  @media @desktop {
+    font-size: 17px;
+  }
 }
 
 .user-list__link-text {
-  @media @tablet {
-    position: absolute;
-    clip: rect(0 0 0 0);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
+  width: 80%;
+
+  &--search {
+    @media @tablet {
+      display: none;
+    }
+  }
+
+  &--cart-status {
+    margin-left: 6px;
   }
 }
 
 .user-list__link-image {
-  position: absolute;
-  left: -38px;
-  top: 50%;
-  transform: translateY(-50%);
-  fill: #231f20;
-  opacity: 0.2;
-
-  &--search {
-    width: 18px;
-    height: 18px;
-  }
+  width: 21px;
+  height: 18px;
+  margin-right: 24px;
+  order: -1;
+  fill: @menu-icon;
 
   &--cart {
-    width: 21px;
-    height: 18px;
+    @media @tablet {
+      margin-right: 1px;
+    }
   }
-}
 
-.user-list__link:hover &,
-.user-list__link:active & {
-  fill: @accent-primary;
-  opacity: 1;
-}
-
-.user-list__link:active & {
-  fill-opacity: 0.3;
+  &--search {
+    @media @tablet {
+      margin: 0 auto;
+      margin-top: 4px;
+    }
+  }
 }
