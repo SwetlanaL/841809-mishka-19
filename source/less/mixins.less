@@ -1,18 +1,3 @@
-.wrapper-basic-mobile(@width: 81.25%) {
-  width: @width;
-  margin: 0 auto;
-}
-
-.wrapper-basic-tablet(@width: 86.53%) {
-  width: @width;
-  margin: 0 auto;
-}
-
-.wrapper-basic-desktop(@width: 91.31%) {
-  width: @width;
-  margin: 0 auto;
-}
-
 .list-reset(@padding-left: 0) {
   margin: 0;
   padding-left: @padding-left;
@@ -47,3 +32,30 @@
 .transition(@property: all, @duration: 0.4s, @function: ease-in) {
   transition: @arguments;
 }
+
+.modal-mobile-wrapper(@width: 81.25%) {
+  width: @width;
+  margin: 0 auto;
+}
+
+.modal-tablet-wrapper(@width: 61.7%) {
+  width: @width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.keyframes(@name, @rules) {
+  @keyframes @name {
+    @rules();
+  }
+}
+
+.keyframes(fadeIn, {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+});

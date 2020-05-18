@@ -4,8 +4,14 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  background-color: @background-basic;
   @color: rgba(0, 1, 1, 0.25);
   .box-shadow(0 5px 10px 0 @color);
   border: solid 1px @modal-border;
   z-index: 1;
+  animation: fadeIn 0.8s both;
+}
+
+.modal--open {
+  display: block;
 }

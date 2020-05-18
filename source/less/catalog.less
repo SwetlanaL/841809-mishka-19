@@ -23,7 +23,6 @@
 }
 
 .catalog__item {
-  position: relative;
   width: 260px;
   margin: 0 auto 30px;
 
@@ -40,7 +39,9 @@
   }
 
   @media @desktop {
-    width: 316px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 316px;
     margin-right: 50px;
     margin-bottom: 30px;
 
@@ -87,23 +88,35 @@
 
   @media @desktop {
     width: 100%;
-    min-height: 197px;
+  }
+}
+
+.catalog__item-title-link {
+  margin-top: 26px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media @desktop {
+    margin-top: 26px;
   }
 }
 
 .catalog__item-title {
   display: block;
   width: 100%;
-  margin-top: 27px;
-  margin-bottom: 4px;
+  margin: 0;
   .set-font(17px; 24px);
   font-weight: 700;
   color: @titles;
 
   @media @tablet {
     width: 83%;
-    margin-top: 25px;
-    margin-bottom: 5px;
     font-size: 20px;
   }
 
@@ -114,6 +127,7 @@
 
 .catalog__item-description {
   display: inline-block;
+  margin-top: 5px;
   margin-bottom: 19px;
   .set-font(13px; 30px);
   font-weight: 400;
@@ -121,20 +135,47 @@
   vertical-align: middle;
 
   @media @tablet {
-    margin-bottom: auto;
     font-size: 15px;
+  }
+
+  @media @desktop {
+    margin-bottom: 15px;
+    margin-top: 4px;
+    padding-bottom: 0;
+  }
+}
+
+.catalog__item-order {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  border-top: 1px solid @border;
+
+  @media @tablet {
+    width: 100%;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: auto;
+    padding-top: 22px;
+  }
+
+  @media @desktop {
+    margin-left: 0;
+  }
+
+  @media @desktop {
+    margin-right: 0;
+    margin-bottom: 18px;
   }
 }
 
 .catalog__item-price {
-  width: 100%;
-  display: block;
-  margin-bottom: 26px;
-  padding-top: 22px;
+  width: 50%;
   .set-font(15px; 24px);
   font-weight: 700;
   color: @titles;
-  border-top: 1px solid @border;
 
   @media @tablet {
     font-size: 17px;
@@ -143,16 +184,11 @@
 
 .catalog__cart-button {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  right: 1.44em;
-  bottom: 1.6em;
+  justify-content: flex-end;
+  align-items: flex-start;
   width: 32px;
   height: 32px;
   .text-indent;
-  z-index: 1;
-  overflow: visible;
 
   &:hover .catalog__cart-button-image {
     fill: @accent-primary;
@@ -161,14 +197,9 @@
   &:active .catalog__cart-button-image {
     opacity: 0.3;
   }
-
-  @media @desktop {
-    right: 1.84em;
-  }
 }
 
 .catalog__cart-button-image {
-  display: block;
   width: 21px;
   height: 18px;
   fill: @menu-icon;
