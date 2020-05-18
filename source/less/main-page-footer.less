@@ -1,35 +1,41 @@
 .main-page-footer {
   width: 100%;
-  margin-bottom: 38px;
+  margin-bottom: 40px;
+
+  @media @tablet {
+    margin-bottom: 57px;
+  }
 
   @media @desktop {
     display: flex;
     flex-wrap: wrap;
-  }
-
-  @media @desktop {
     width: 1050px;
     margin: 0 auto;
-    margin-bottom: 105px;
+    margin-bottom: 104px;
   }
 }
 
 .main-page-footer__map-container {
   position: relative;
   width: 100%;
-  margin-bottom: 35px;
+  margin-bottom: 41px;
 
   &::after {
     position: absolute;
     content: "";
-    left: 43.1%;
-    bottom: 46%;
+    top: 50%;
+    left: 50%;
     width: 67px;
     height: 100px;
+    transform: translate(calc(-50% + 10px), calc(-50% - 38px));
     background-image: url("../img/icon-map-pin.svg");
     background-position: center;
     background-repeat: no-repeat;
     z-index: 1;
+  }
+
+  @media @tablet {
+    margin-bottom: 54px;
   }
 
   @media @desktop {
@@ -49,6 +55,6 @@
   @media @desktop {
     margin: 0;
     margin-top: -50px;
-    margin-left: 125px;
+    margin-left: 175px;
   }
 }

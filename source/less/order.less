@@ -1,5 +1,9 @@
 .order {
-  margin-bottom: 54px;
+  margin-bottom: 56px;
+
+  @media @tablet {
+    margin-bottom: 50px;
+  }
 }
 
 .order__form {
@@ -12,10 +16,37 @@
 
 .order__block {
   @media @tablet {
-    .set-paddings(68px; 0; 38px; 0);
+    .set-paddings(63px; 0; 67px; 0);
 
     &:nth-child(even) {
       background-color: @page-title-background;
+    }
+  }
+
+  &--color {
+    @media @desktop {
+      .set-paddings(63px; 0; 14px; 0);
+    }
+  }
+
+  &--name {
+    @media @tablet {
+      .set-paddings(50px; 0; 50px; 0);
+    }
+  }
+
+  &--contact {
+    @media @tablet {
+      .set-paddings(40px; 0; 48px; 0);
+    }
+  }
+
+  &--textarea {
+    margin-bottom: 47px;
+    .set-paddings(50px; 0; 0; 0);
+
+    @media @desktop {
+      margin-bottom: 44px;
     }
   }
 }
@@ -25,35 +56,36 @@
   padding: 0;
   border: none;
 
+  &--type {
+    margin-bottom: 44px;
+  }
+
+  &--color {
+    margin-bottom: 40px;
+  }
+
+  &--name {
+    margin-bottom: 30px;
+  }
+
+  &--contact {
+    margin-bottom: 32px;
+  }
+
+  &--textarea {
+    margin-bottom: 6px;
+  }
+
   @media @tablet {
     position: relative;
     margin-left: 217px;
-    margin-right: 50px;
+    margin-right: 52px;
+    margin-bottom: 0;
   }
 
   @media @desktop {
     width: 700px;
     margin: 0 auto;
-  }
-
-  &--type {
-    margin-bottom: 30px;
-  }
-
-  &--color {
-    margin-bottom: 3px;
-  }
-
-  &--name {
-    margin-bottom: 9px;
-  }
-
-  &--contact {
-    margin-bottom: 29px;
-  }
-
-  &--textarea {
-    margin-bottom: 12px;
   }
 }
 
@@ -75,22 +107,36 @@
     width: 70px;
     transform: translateX(-260%);
 
+    &--color {
+      top: 5px;
+      left: 2px;
+    }
+
     &--name {
       top: 16px;
     }
 
     &--tel {
-      top: 24px;
+      top: 28px;
     }
 
     &--email {
-      top: 116px;
+      top: 104px;
       left: 12px;
+
+      @media @desktop {
+        top: 106px;
+        left: 9px;
+      }
+    }
+
+    &--textarea {
+      top: 18px;
     }
   }
 
   @media @desktop {
-    transform: translateX(-170%);
+    transform: translateX(-184%);
   }
 
   &::after {
@@ -107,7 +153,7 @@
 
   &--color,
   &--type {
-    margin-bottom: 31px;
+    margin-bottom: 32px;
   }
 
   &--name {
@@ -129,6 +175,10 @@
   .list-reset;
   padding-left: 62px;
 
+  @media @tablet {
+    padding-left: 80px;
+  }
+
   &--color {
     @media @tablet {
       display: flex;
@@ -142,8 +192,12 @@
 }
 
 .order__item {
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   &--type {
-    margin-bottom: 30px;
+    margin-bottom: 26px;
 
     &:first-child {
       width: 64%;
@@ -154,7 +208,7 @@
     }
 
     @media @tablet {
-      margin-bottom: 52px;
+      margin-bottom: 58px;
     }
   }
 
@@ -162,12 +216,26 @@
     margin-bottom: 37px;
 
     @media @tablet {
-      width: 50%;
-      margin-bottom: 42px;
+      margin-bottom: 52px;
+
+      &:nth-last-child(-n+2) {
+        margin-bottom: 0;
+      }
+
+      &:nth-child(odd) {
+        width: 61.5%;
+      }
+
+      &:nth-child(even) {
+        width: 38.5%;
+      }
     }
 
     @media @desktop {
-      width: 33%;
+      &:nth-child(odd),
+      &:nth-child(even) {
+        width: 32.15%;
+      }
     }
   }
 }
@@ -183,57 +251,86 @@
     font-size: 19px;
   }
 
-  &--color {
-    &::before {
-      content: "";
-      position: absolute;
-      left: -62px;
-      top: -7px;
-      width: 40px;
-      height: 40px;
-      border: 2px solid @text;
-      .transition;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      display: none;
-      left: -62px;
-      top: -7px;
-      width: 40px;
-      height: 40px;
-      background: url("../img/tick-mobile.svg") no-repeat center;
-      .transition;
-    }
-  }
-
   &--type {
     display: block;
 
     &::before {
       content: "";
       position: absolute;
+      top: -8px;
       left: -62px;
-      top: -7px;
       width: 40px;
       height: 40px;
       border: 2px solid @text;
       border-radius: 50%;
       .transition;
+
+      @media @tablet {
+        top: -15px;
+        left: -80px;
+        width: 52px;
+        height: 52px;
+      }
     }
 
     &::after {
       content: "";
       position: absolute;
       display: none;
+      top: calc(-8px + 12px);
       left: calc(-62px + 12px);
-      top: calc(-7px + 12px);
       width: 16px;
       height: 16px;
       background-color: @form-borders;
       border-radius: 50%;
       .transition;
+
+      @media @tablet {
+        top: calc(-15px + 15px);
+        left: calc(-80px + 15px);
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+
+  &--color {
+    &::before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      left: -62px;
+      width: 40px;
+      height: 40px;
+      border: 2px solid @text;
+      .transition;
+
+      @media @tablet {
+        top: -12px;
+        left: -80px;
+        width: 54px;
+        height: 52px;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+      top: -8px;
+      left: -62px;
+      width: 40px;
+      height: 40px;
+      background: url("../img/tick-mobile.svg") no-repeat center;
+      .transition;
+
+      @media @tablet {
+        top: -12px;
+        left: -80px;
+        width: 54px;
+        height: 52px;
+        background-size: 33px 22px;
+      }
     }
   }
 

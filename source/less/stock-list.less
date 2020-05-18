@@ -11,7 +11,7 @@
 
 .stock-list__item {
   width: 100%;
-  .set-paddings(1.75em; 0; 1.9em; 0);
+  .set-paddings(1.75em; 0; 1.9em; 2em);
   .outer-shadow;
   .inner-shadow;
 
@@ -21,6 +21,14 @@
 
     &:not(:last-child) {
       margin-right: 34px;
+    }
+  }
+
+  @media @desktop {
+    .set-paddings(1.24em; 0; 1.9em; 0);
+
+    &:not(:last-child) {
+      margin-right: 61px;
     }
   }
 }

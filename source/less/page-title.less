@@ -9,6 +9,19 @@
   text-align: center;
   background-color: @page-title-background;
 
+  @media @tablet {
+    margin-top: -4rem;
+    .set-paddings(2.2em; 0; 1.89em; 0);
+    .set-font(43px; 50px);
+    border-top: 1px solid @border;
+  }
+
+  @media @desktop {
+    margin-top: -71px;
+    .set-paddings(1.76em; 0; 1.95em; 0);
+    .set-font(53px; 57px);
+  }
+
   &::after {
     content: none;
     position: absolute;
@@ -33,13 +46,5 @@
       height: 34px;
       background-size: 1150px 34px;
     }
-  }
-
-  @media @tablet {
-    .set-font(43px; 50px);
-  }
-
-  @media @desktop {
-    .set-font(53px; 57px);
   }
 }

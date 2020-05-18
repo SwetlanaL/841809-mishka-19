@@ -1,6 +1,14 @@
 .about {
   width: 100%;
-  margin-bottom: 55px;
+  margin-bottom: -17px;
+
+  @media @tablet {
+    margin-bottom: 84px;
+  }
+
+  @media @desktop {
+    margin-bottom: 90px;
+  }
 }
 
 .about__title {
@@ -11,7 +19,7 @@
   }
 
   @media @desktop {
-    padding-left: 175px;
+    padding-left: 222px;
   }
 }
 
@@ -27,7 +35,7 @@
   }
 
   @media @desktop {
-    padding-left: 175px;
+    padding-left: 225px;
   }
 }
 
@@ -45,15 +53,35 @@
   @media @tablet {
     .set-font(20px; 22px);
     width: 50%;
-    margin-bottom: 110px;
+    margin-bottom: 112px;
 
-    &:nth-last-child(-n+2) {
+    &:nth-child(4n-1) {
       margin-bottom: 0;
+    }
+
+    &--price {
+      order: 2;
+    }
+
+    &--likes {
+      order: 4;
+    }
+
+    &--love {
+      order: 1;
+    }
+
+    &--support {
+      order: 3;
+    }
+
+    &--packing {
+      order: 5;
     }
   }
 
   @media @desktop {
-    width: 40%;
+    width: 37.8%;
   }
 
   &::before {

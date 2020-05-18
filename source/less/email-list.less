@@ -3,19 +3,29 @@
 }
 
 .email-list__item {
+  width: 100%;
   margin-top: 0;
 
-  @media @tablet {
-    display: flex;
-    align-items: baseline;
+  &:last-child {
+    margin-bottom: 0;
   }
 
   &--name {
     margin-bottom: 22px;
+
+    @media @tablet {
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 23px;
+    }
   }
 
   &--tel {
     margin-bottom: 33px;
+
+    @media @tablet {
+      margin-bottom: 11px;
+    }
   }
 
   &--email {
@@ -28,10 +38,29 @@
 }
 
 .email-list__label {
-  display: block;
-
   @media @tablet {
     margin-right: 26px;
+  }
+}
+
+.email-list__control-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 2px solid @titles;
+
+  &:active,
+  &:focus,
+  &:hover {
+    border-color: @form-borders;
+    outline: none;
+  }
+
+  &:hover .email-list__control-image,
+  &:active .email-list__control-image,
+  &:focus .email-list__control-image {
+    fill: @form-borders;
   }
 }
 
@@ -44,17 +73,24 @@
   font-weight: 400;
   color: @text;
   border-style: hidden;
-  border-bottom: 2px solid @titles;
   appearance: none;
   border-radius: 0;
+  border-bottom: 2px solid @titles;
   .transition;
 
+  @media @tablet {
+    .set-font(19px; 18px);
+  }
 
   &::placeholder {
     .set-paddings(20px; 0; 10px; 0);
     color: fadeout(@text, 70%);
     overflow: visible;
-    line-height: 14px;
+    line-height: 0;
+
+    @media @tablet {
+      .set-paddings(20px; 16px; 10px; 16px);
+    }
   }
 
   &:active,
@@ -75,9 +111,47 @@
   &--email,
   &--tel {
     .set-paddings(21px; 0; 16px; 0);
+    border-bottom: none;
 
     @media @tablet {
       background-color: @page-title-background;
+    }
+  }
+}
+
+.email-list__control-image {
+  margin-top: 4px;
+  margin-right: 9px;
+  fill: @email-icon;
+
+  &--tel {
+    width: 25px;
+    height: 24px;
+    margin-top: 4px;
+    margin-right: 9px;
+
+    @media @tablet {
+      margin-right: 31px;
+    }
+
+    @media @tablet {
+      margin-right: 9px;
+    }
+  }
+
+  &--email {
+    width: 32px;
+    height: 31px;
+    margin-top: 10px;
+    margin-right: 6px;
+
+    @media @tablet {
+      margin-top: 11px;
+      margin-right: 25px;
+    }
+
+    @media @tablet {
+      margin-right: 5px;
     }
   }
 }
@@ -86,7 +160,7 @@
   width: 100%;
   min-height: 142px;
   margin: 0;
-  .set-paddings(14px; 15px; 14px; 15px);
+  .set-paddings(14px; 16px; 14px; 16px);
   .set-font(17px; 18px);
   font-family: "OpenSans", "Arial", sans-serif;
   font-weight: 400;
@@ -95,6 +169,10 @@
   border: 2px solid @titles;
   resize: none;
   .transition;
+
+  @media @tablet {
+    .set-font(19px; 18px);
+  }
 
   &::placeholder {
     color: fadeout(@text, 70%);

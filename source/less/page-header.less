@@ -2,6 +2,11 @@
   position: relative;
   width: 100%;
   margin-bottom: 0;
+
+  @media @tablet {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 
 .page-header__logo {
@@ -9,9 +14,8 @@
   width: 86px;
   height: 35px;
   margin: 0 auto;
-  margin-top: 23px;
+  margin-top: 22px;
   margin-bottom: 23px;
-  text-align: center;
 
   &:hover {
     opacity: 0.6;
@@ -33,7 +37,68 @@
   @media @desktop {
     width: 149px;
     height: 72px;
+    top: -14px;
     left: 50%;
     transform: translateX(-50%);
+  }
+}
+
+.page-header__toggle {
+  position: absolute;
+  top: 6px;
+  right: 30px;
+  width: 21px;
+  height: 21px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  .text-indent;
+  z-index: 1;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 28px;
+    height: 3px;
+    background-color: @titles;
+    .transition;
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fadeout(@titles, 70%);
+    box-shadow: 0 6px 0 0 fadeout(@titles, 70%), 0 12px 0 0 fadeout(@titles, 70%);
+  }
+
+  @media @tablet {
+    display: none;
+  }
+
+  &--off {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 2px;
+      box-shadow: 0 6px 0 0 @titles, 0 12px 0 0 @titles;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 }
