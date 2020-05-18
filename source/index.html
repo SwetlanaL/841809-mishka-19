@@ -202,6 +202,27 @@
       </a>
     </div>
   </footer>
+  <div class="modal-size-selection modal">
+    <h2 class="modal-size-selection__title">Добавить в&nbsp;корзину</h2>
+    <span class="modal-size-selection__request">Выберите размер:</span>
+    <form class="modal-size-selection__form" action="https://echo.htmlacademy.ru" method="post">
+      <ul class="modal-size-selection__list">
+        <li class="modal-size-selection__item">
+          <input id="size-s" class="modal-size-selection__control visually-hidden" type="radio" name="size" value="small" checked>
+          <label for="size-s" class="modal-size-selection__label">s</label>
+        </li>
+        <li class="modal-size-selection__item">
+          <input id="size-m" class="modal-size-selection__control visually-hidden" type="radio" name="size" value="medium">
+          <label for="size-m" class="modal-size-selection__label">m</label>
+        </li>
+        <li class="modal-size-selection__item">
+          <input id="size-l" class="modal-size-selection__control visually-hidden" type="radio" name="size" value="large">
+          <label for="size-l" class="modal-size-selection__label">l</label>
+        </li>
+      </ul>
+    </form>
+    <button class="modal-size-selection__button button button--green" type="submit">Добавить</button>
+  </div>
   <script src="js/main.js"></script>
 </body>
 
