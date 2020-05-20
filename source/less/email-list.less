@@ -76,6 +76,7 @@
   appearance: none;
   border-radius: 0;
   border-bottom: 2px solid @titles;
+
   .transition;
 
   @media @tablet {
@@ -112,6 +113,10 @@
   &--tel {
     .set-paddings(21px; 0; 16px; 0);
     border-bottom: none;
+
+    &:-webkit-autofill {
+      box-shadow: inset 0 0 0 1000px @page-title-background;
+    }
 
     @media @tablet {
       background-color: @page-title-background;

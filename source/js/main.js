@@ -24,7 +24,6 @@ if (orderPopup) {
   addButton.addEventListener('click', function(evt) {
     evt.preventDefault();
     if (orderPopup.classList.contains('modal--open')) {
-      evt.preventDefault();
       orderPopup.classList.remove('modal--open');
     }
   });
