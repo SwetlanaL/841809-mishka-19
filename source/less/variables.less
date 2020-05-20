@@ -21,3 +21,8 @@
 @mobile-only: ~"(max-width: @{mobile-width-only})";
 @tablet: ~"(min-width: @{tablet-width})";
 @desktop: ~"(min-width: @{desktop-width})";
+
+@retina-dpi: 144dpi;
+@retina-dppx: 1.5dppx;
+@retina-1: ~"(min-resolution: @{retina-dpi})";
+@retina-2: ~"(min-resolution: @{retina-dppx})";

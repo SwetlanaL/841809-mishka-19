@@ -11,8 +11,13 @@
     margin-bottom: 164px;
     padding-top: 76px;
     background-image: url("../img/review@1x.jpg");
+    background-size: image-size("../img/review@1x.jpg");
     background-position: left top;
     background-repeat: no-repeat;
+
+    @media @retina-1, @retina-2 {
+      background-image: url("../img/review@2x.jpg");
+    }
   }
 
   @media @desktop {
@@ -22,6 +27,7 @@
     padding-right: 0;
     padding-bottom: 70px;
   }
+
 
   &::after {
     content: "";
