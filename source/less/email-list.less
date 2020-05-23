@@ -98,6 +98,12 @@
   &:hover {
     border-color: @form-borders;
     outline: none;
+
+
+  + .email-list__control-image {
+      fill: @form-borders;
+      opacity: 1;
+    }
   }
 
   &:required {
@@ -184,7 +190,8 @@
 
   &:active,
   &:focus,
-  &:hover {
+  &:hover,
+  &:valid {
     border-color: @form-borders;
     outline: none;
   }
