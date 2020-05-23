@@ -15,7 +15,7 @@ var orderPopup = document.querySelector(".modal-size-selection");
 
 if (orderPopup) {
   for (var i = 0; i < orderButtons.length; i++) {
-    orderButtons[i].addEventListener('click', function(evt) {
+    orderButtons[i].addEventListener("click", function(evt) {
     evt.preventDefault();
     orderPopup.classList.add("modal--open");
     });
