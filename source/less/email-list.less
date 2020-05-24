@@ -11,17 +11,17 @@
   }
 
   &--name {
-    margin-bottom: 22px;
+    margin-bottom: 16px;
 
     @media @tablet {
       display: flex;
       align-items: baseline;
-      margin-bottom: 23px;
+      margin-bottom: 25px;
     }
   }
 
   &--tel {
-    margin-bottom: 33px;
+    margin-bottom: 32px;
 
     @media @tablet {
       margin-bottom: 11px;
@@ -66,8 +66,8 @@
 
 .email-list__control {
   width: 100%;
-  min-height: 52px;
-  .set-paddings(8px; 0; 10px; 0);
+  min-height: 51px;
+  .set-paddings(7px; 0; 7px; 0);
   .set-font(17px; 20px);
   font-family: @font-family-basic;
   font-weight: 400;
@@ -119,7 +119,9 @@
     border-bottom: none;
 
     @media @tablet {
+      .set-paddings(20px; 0; 14px; 0);
       background-color: @page-title-background;
+      padding-bottom: 15px;
 
       &:-webkit-autofill {
         box-shadow: inset 0 0 0 1000px @page-title-background;
@@ -134,68 +136,33 @@
   fill: @email-icon;
 
   &--tel {
-    width: 25px;
+    width: 26px;
     height: 24px;
     margin-top: 4px;
     margin-right: 9px;
 
     @media @tablet {
-      margin-right: 31px;
+      margin-right: 25px;
     }
 
-    @media @tablet {
-      margin-right: 9px;
+    @media @desktop {
+      margin-right: 8px;
     }
   }
 
   &--email {
-    width: 32px;
-    height: 31px;
+    width: 38px;
+    height: 38px;
     margin-top: 10px;
     margin-right: 6px;
 
     @media @tablet {
-      margin-top: 11px;
-      margin-right: 25px;
+      margin-top: 14px;
+      margin-right: 19px;
     }
 
-    @media @tablet {
-      margin-right: 5px;
+    @media @desktop {
+      margin-right: 2px;
     }
-  }
-}
-
-.email-list__textarea {
-  width: 100%;
-  min-height: 142px;
-  margin: 0;
-  .set-paddings(14px; 16px; 14px; 16px);
-  .set-font(17px; 18px);
-  font-family: "OpenSans", "Arial", sans-serif;
-  font-weight: 400;
-  color: @text;
-  background-color: @background-basic;
-  border: 2px solid @titles;
-  resize: none;
-  .transition;
-
-  @media @tablet {
-    .set-font(19px; 18px);
-  }
-
-  &::placeholder {
-    color: fadeout(@text, 70%);
-  }
-
-  &:active,
-  &:focus,
-  &:hover,
-  &:valid {
-    border-color: @form-borders;
-    outline: none;
-  }
-
-  &:required {
-    box-shadow: none;
   }
 }

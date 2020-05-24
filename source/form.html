@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>HTML Academy: Мишка</title>
+  <link rel="preload" href="fonts/opensans.woff2" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -17,7 +19,7 @@
     <a class="page-header__logo" href="index.html">
       <picture>
         <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
-        <source media="(min-width: 772px)" srcset="img/logo-tablet.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
         <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Логотип интернет-магазина Мишка" width="86" height="35">
       </picture>
     </a>
@@ -58,7 +60,7 @@
     <section class="order">
       <h2 class="visually-hidden">Сделать заказ</h2>
       <form class="order__form" action="https://echo.htmlacademy.ru" method="post">
-        <div class="order__block order__block--type">
+        <div class="order__form-block order__form-block--type">
           <fieldset class="order__group order__group--type">
             <legend class="visually-hidden">Выбор по типу</legend>
             <span class="order__title  order__title--type">тип</span>
@@ -74,7 +76,7 @@
             </ul>
           </fieldset>
         </div>
-        <div class="order__block order__block--color">
+        <div class="order__form-block order__form-block--color">
           <fieldset class="order__group order__group--color">
             <legend class="visually-hidden">Выбор по цвету</legend>
             <span class="order__title order__title--color">цвет</span>
@@ -106,7 +108,7 @@
             </ul>
           </fieldset>
         </div>
-        <div class="order__block order__block--name">
+        <div class="order__form-block order__form-block--name">
           <fieldset class="order__group order__group--name">
             <legend class="visually-hidden">Ваше имя, фамилия, отчество</legend>
             <span class="order__title order__title--name">ФИО</span>
@@ -126,8 +128,8 @@
             </ul>
           </fieldset>
         </div>
-        <div class="order__block order__block--contact">
-          <fieldset class="order__group">
+        <div class="order__form-block order__form-block--contact">
+          <fieldset class="order__group order__group--contact">
             <legend class="visually-hidden">Телефон и адрес электронной почты</legend>
             <ul class="order__list email-list">
               <li class="email-list__item email-list__item--tel">
@@ -151,11 +153,11 @@
             </ul>
           </fieldset>
         </div>
-        <div class="order__block order__block--textarea">
+        <div class="order__form-block order__form-block--textarea">
           <fieldset class="order__group order__group--textarea">
             <legend class="visually-hidden">Форма письма с деталями заказа</legend>
             <label for="user-text"><span class="order__title order__title--textarea">доп</span></label>
-            <textarea id="user-text" class="email-list__textarea" rows="6" cols="48" name="user-text" placeholder="Опишите все ваши пожелания к заказу" required=""></textarea>
+            <textarea id="user-text" class="order__textarea" rows="6" cols="48" name="user-text" placeholder="Опишите все ваши пожелания к заказу" required=""></textarea>
           </fieldset>
         </div>
         <div class="order__bottom-block">

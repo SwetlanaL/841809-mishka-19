@@ -13,7 +13,7 @@
   @media @tablet {
     flex-wrap: nowrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     .set-paddings(52px; 50px; 62px; 50px);
   }
 
@@ -50,10 +50,9 @@
 }
 
 .page-footer__copyright-link {
-  width: 186px;
+  width: 185px;
   display: flex;
   align-items: center;
-  align-self: flex-end;
   margin-top: 20px;
   .set-font(19px; 18px);
   font-weight: 700;
@@ -62,6 +61,7 @@
 
   @media @tablet {
     margin-top: 0;
+    padding-top: 3px;
   }
 
   &:hover .page-footer__copyright-logo {
@@ -78,8 +78,12 @@
 }
 
 .page-footer__copyright-logo {
-  width: 27px;
-  height: 34px;
-  margin-left: 28px;
+  width: 28px;
+  height: 36px;
+  margin-left: 30px;
   fill: @accent-primary;
+
+  @media @tablet {
+    padding-top: 2px;
+  }
 }

@@ -3,7 +3,7 @@
   margin-bottom: 40px;
 
   @media @tablet {
-    margin-bottom: 57px;
+    margin-bottom: 58px;
   }
 
   @media @desktop {
@@ -27,11 +27,19 @@
     left: 50%;
     width: 67px;
     height: 100px;
-    transform: translate(calc(-50% + 10px), calc(-50% - 38px));
+    transform: translate(calc(-50% + 12px), calc(-50% - 32px));
     background-image: url("../img/icon-map-pin.svg");
     background-position: center;
     background-repeat: no-repeat;
     z-index: 1;
+
+    @media @tablet {
+      transform: translate(calc(-50% + 12px), calc(-50% - 40px));
+    }
+
+    @media @desktop {
+      transfrom: translate(calc(-50% + 10px), calc(-50% - 32px));
+    }
   }
 
   @media @tablet {
